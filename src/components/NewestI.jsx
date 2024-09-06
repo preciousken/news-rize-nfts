@@ -14,7 +14,12 @@ const NewestI = () => {
               data-sal-delay="150"
               data-sal="slide-up"
               data-sal-duration="800"
-              style={{ color: "#ffffff",fontSize:"32px",fontFamily:"Roboto",fontWeight:"bolder" }}
+              style={{
+                color: "#ffffff",
+                fontSize: "32px",
+                fontFamily: "Roboto",
+                fontWeight: "bolder",
+              }}
             >
               Newest Items
             </h3>

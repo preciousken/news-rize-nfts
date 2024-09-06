@@ -15,6 +15,12 @@ const ExploreProduct = () => {
               data-sal-delay="150"
               data-sal="slide-up"
               data-sal-duration="800"
+              style={{
+                color: "#ffffff",
+                fontSize: "32px",
+                fontFamily: "Roboto",
+                fontWeight: "bolder",
+              }}
             >
               Explore Product
             </h3>
@@ -26,8 +32,8 @@ const ExploreProduct = () => {
               data-sal="slide-up"
               data-sal-duration="800"
             >
-              <button className="discover-filter-button discover-filter-activation btn btn-primary open">
-                Filter<i className="feather-filter"></i>
+              <button className="discover-filter-button discover-filter-activation btn btn-primary ">
+                Filter<i class="fa-solid fa-xmark"></i>
               </button>
             </div>
           </div>
