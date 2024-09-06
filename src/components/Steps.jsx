@@ -17,7 +17,7 @@ const Steps = () => {
               data-sal-delay="150"
               data-sal="slide-up"
               data-sal-duration="800"
-              style={{ color: "#ffffff" }}
+              style={{ color: "#ffffff",fontSize:"32px",fontFamily:"Roboto",fontWeight:"bolder" }}
             >
               Create and sell your NFTs
             </h3>
@@ -50,7 +50,7 @@ const Steps = () => {
                     standout, easily customizable and scalable.
                   </p>
                   <a className="read-more-button" href="#">
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <i className="fa-solid fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
@@ -81,7 +81,7 @@ const Steps = () => {
                     need. Choose the best suitable template.
                   </p>
                   <a className="read-more-button" href="#">
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <i className="fa-solid fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
@@ -112,7 +112,7 @@ const Steps = () => {
                     on all devices: desktop, tablets and.
                   </p>
                   <a className="read-more-button" href="#">
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <i className="fa-solid fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
@@ -143,7 +143,7 @@ const Steps = () => {
                     lie close to the earth NFT's.
                   </p>
                   <a className="read-more-button" href="#">
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <i className="fa-solid fa-arrow-right"></i>
                   </a>
                 </div>
               </div>

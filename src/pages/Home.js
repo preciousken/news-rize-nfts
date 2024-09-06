@@ -3,6 +3,9 @@ import React from 'react';
 import Hero from '../components/Hero'
 import Bidding from '../components/Bidding'
 import Steps from "../components/Steps"
+import NewestI from '../components/NewestI'
+import TopSeller from "../components/TopSeller"
+import ExploreProduct from "../components/ExploreProduct"
 
 const Home = () => {
     return (
@@ -10,7 +13,9 @@ const Home = () => {
             <Hero />
             <Bidding />
             <Steps />
-            <Steps />
+            <NewestI />
+            <TopSeller />
+            <ExploreProduct />
         </>
     )
 };

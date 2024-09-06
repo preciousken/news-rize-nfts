@@ -13367,6 +13367,7 @@ span.rn-badge-card::before {
   font-weight: 400;
   font-size: 18px;
   margin-bottom: 4px;
+  display: none;
 }
 .rn-notification-wrapper.creators
   .top-seller-inner-one
