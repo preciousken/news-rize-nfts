@@ -33,7 +33,7 @@ const ExploreProduct = () => {
               data-sal-duration="800"
             >
               <button className="discover-filter-button discover-filter-activation btn btn-primary ">
-                Filter<i class="fa-solid fa-xmark"></i>
+                Filter<i className="fa-solid fa-xmark"></i>
               </button>
             </div>
           </div>
@@ -45,7 +45,9 @@ const ExploreProduct = () => {
         >
           <div className="inner">
             <div className="filter-select-option">
-              <label className="filter-leble">LIKES</label>
+              <label className="filter-leble" style={{ color: "#acacac" }}>
+                LIKES
+              </label>
               <select style={{ display: "none" }}>
                 <option data-display="Most liked">Most liked</option>
                 <option value="1">Least liked</option>
@@ -68,7 +70,9 @@ const ExploreProduct = () => {
             </div>
 
             <div className="filter-select-option">
-              <label className="filter-leble">Category</label>
+              <label className="filter-leble" style={{ color: "#acacac" }}>
+                Category
+              </label>
               <select style={{ display: "none" }}>
                 <option data-display="Category">Category</option>
                 <option value="1">Art</option>
@@ -107,7 +111,9 @@ const ExploreProduct = () => {
             </div>
 
             <div className="filter-select-option">
-              <label className="filter-leble">Collections</label>
+              <label className="filter-leble" style={{ color: "#acacac" }}>
+                Collections
+              </label>
               <select style={{ display: "none" }}>
                 <option data-display="Collections">Collections</option>
                 <option value="1">BoredApeYachtClub</option>
@@ -138,7 +144,9 @@ const ExploreProduct = () => {
             </div>
 
             <div className="filter-select-option">
-              <label className="filter-leble">Sale type</label>
+              <label className="filter-leble" style={{ color: "#acacac" }}>
+                Sale type
+              </label>
               <select style={{ display: "none" }}>
                 <option data-display="Sale type">Sale type</option>
                 <option value="1">Fixed price</option>
@@ -173,7 +181,9 @@ const ExploreProduct = () => {
             </div>
 
             <div className="filter-select-option">
-              <label className="filter-leble">Price Range</label>
+              <label className="filter-leble" style={{ color: "#acacac" }}>
+                Price Range
+              </label>
               <div className="price_filter s-filter clear">
                 <form action="#" method="GET">
                   <div
@@ -197,9 +207,17 @@ const ExploreProduct = () => {
                   </div>
                   <div className="slider__range--output">
                     <div className="price__output--wrap">
-                      <div className="price--output">
+                      <div
+                        className="price--output"
+                        style={{ color: "#acacac" }}
+                      >
                         <span>Price :</span>
-                        <input type="text" id="amount" readonly="" />
+                        <input
+                          type="text"
+                          id="amount"
+                          value={"$152 - $300"}
+                          readonly=""
+                        />
                       </div>
                       <div className="price--filter">
                         <a className="btn btn-primary btn-small" href="#">

@@ -6,6 +6,7 @@ import Steps from "../components/Steps"
 import NewestI from '../components/NewestI'
 import TopSeller from "../components/TopSeller"
 import ExploreProduct from "../components/ExploreProduct"
+import TopCollection from "../components/TopCol"
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <NewestI />
             <TopSeller />
             <ExploreProduct />
+            <TopCollection />
         </>
     )
 };
