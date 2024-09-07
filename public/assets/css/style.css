@@ -12538,10 +12538,10 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .mainmenu-nav .mainmenu li.has-droupdown > a::after,
 .mainmenu-nav .mainmenu li.with-megamenu > a::after {
-  content: "\e92e";
+  /* content: "\f002"; */
   position: absolute;
   top: 50%;
-  font-family: "feather" !important;
+  font-family: "Font Awesome 5 Free" !important;
   right: -7px;
   transform: translateY(-50%);
 }
@@ -18512,6 +18512,8 @@ button .small-image {
   font-weight: 500;
   font-size: 18px;
   transition: 0.4s;
+  text-decoration: none !important;
+  color: #ffffff !important;
 }
 .product-style-one a .product-name:hover {
   color: var(--color-primary) !important;
@@ -25745,5 +25747,27 @@ body.active-light-mode {
 }
 .active-light-mode .bg-image-svg-1.with-down-shadow::after {
   background-image: linear-gradient(to top, #0c0c2100 0%, #edf0f2ab 87%);
+}
+
+.hide-scrollbar {
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hide scrollbar for Webkit browsers */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for Internet Explorer and Edge */
+.hide-scrollbar {
+  -ms-overflow-style: none;
 }
 /*# sourceMappingURL=../maps/style.css.map */

@@ -24,7 +24,7 @@ const Header = () => {
               <nav id="sideNav" className="mainmenu-nav d-none d-xl-block">
                 <ul className="mainmenu">
                   <li className="has-droupdown has-menu-child-item">
-                    <a href="index.html">Home</a>
+                    <a href="index.html">Home <i className="fa-solid fa-chevron-down" style={{fontSize:"8px"}}></i></a>
                     <ul className="submenu">
                       <li>
                         <a href="index.html">
@@ -118,11 +118,9 @@ const Header = () => {
                       </li>
                     </ul>
                   </li>
-                  <li>
-                    <a href="about.html">About</a>
-                  </li>
+                
                   <li className="has-droupdown has-menu-child-item">
-                    <a href="#">Explore</a>
+                    <a href="#">Explore <i className="fa-solid fa-chevron-down" style={{fontSize:"8px"}}></i></a>
                     <ul className="submenu">
                       <li>
                         <a href="explore-one.html">
@@ -205,7 +203,7 @@ const Header = () => {
                     </ul>
                   </li>
                   <li className="with-megamenu">
-                    <a href="#">Pages</a>
+                    <a href="#">Pages <i className="fa-solid fa-chevron-down" style={{fontSize:"8px"}}></i></a>
                     <div className="rn-megamenu">
                       <div className="wrapper">
                         <div className="row row--0">
@@ -919,7 +917,7 @@ const Header = () => {
                   </li>
                   <li className="has-droupdown has-menu-child-item">
                     <a className="down" href="blog.html">
-                      Blog
+                      Blog <i className="fa-solid fa-chevron-down" style={{fontSize:"8px"}}></i>
                     </a>
                     <ul className="submenu">
                       <li>

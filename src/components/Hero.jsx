@@ -37,7 +37,7 @@ const Hero = () => {
               </a>
               <a
                 className="btn btn-large btn-primary-alta sal-animate"
-                href="create.html"
+                href="createnft"
                 data-sal-delay="500"
                 data-sal="slide-up"
                 data-sal-duration="800"
