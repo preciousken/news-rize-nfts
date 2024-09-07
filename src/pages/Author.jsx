@@ -23,12 +23,28 @@ const Author = () => {
                     />
                   </div>
                   <div className="rn-author-info-content">
-                    <h4 className="title">MRS SUNAYRA AHSAN</h4>
-                    <a href="#" className="social-follw">
+                    <h4
+                      className="title"
+                      style={{
+                        color: "#ffffff",
+                        fontSize: "24px",
+                        fontFamily: "Roboto",
+                        fontWeight: "bolder",
+                      }}
+                    >
+                      MRS SUNAYRA AHSAN
+                    </h4>
+                    <a href="#" className="social-follw"
+            style={{
+              color: "#acacac",
+              fontSize: "18px",
+              fontFamily: "Roboto",
+              fontWeight: "bolder",
+            }}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
+                        width="32"
+                        height="32"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
