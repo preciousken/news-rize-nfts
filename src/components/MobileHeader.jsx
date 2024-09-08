@@ -6,13 +6,13 @@ const MobileHeader = () => {
       <div className="inner">
         <div className="header-top">
           <div className="logo logo-custom-css">
-            <a className="logo-light" href="index.html">
+            <a className="logo-light" href="/">
               <img
                 src="https://stakecoreum.com/static/media/RizeLogo.554ff0543dc4e353cc17.png"
                 alt="nft-logo"
               />
             </a>
-            <a className="logo-dark" href="index.html">
+            <a className="logo-dark" href="/">
               <img src="assets/images/logo/logo-dark.png" alt="nft-logo" />
             </a>
           </div>
@@ -31,7 +31,7 @@ const MobileHeader = () => {
               </a>
               <ul className="submenu">
                 <li>
-                  <a href="index.html">
+                  <a href="/">
                     Home page - 01 <i className="feather-home"></i>
                   </a>
                 </li>

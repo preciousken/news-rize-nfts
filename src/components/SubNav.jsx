@@ -20,7 +20,7 @@ const SubNav = ({ title = "" }) => {
           <div className="col-lg-6 col-md-6 col-12">
             <ul className="breadcrumb-list">
               <li className="item">
-                <a href="index.html">Home</a>
+                <a href="/">Home</a>
               </li>
               <li className="separator">
                 <i className="fa-solid fa-chevron-right"></i>

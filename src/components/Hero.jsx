@@ -2,7 +2,10 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="slider-one rn-section-gapTop" style={{ background: "#13131d" }}>
+    <div
+      className="slider-one rn-section-gapTop"
+      style={{ background: "#13131d" }}
+    >
       <div className="container">
         <div className="row row-reverce-sm align-items-center">
           <div className="col-lg-5 col-md-6 col-sm-12 mt_sm--50">

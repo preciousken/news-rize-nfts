@@ -1,0 +1,11 @@
+import React from "react";
+import { Navigate, Outlet } from "react-router-dom";
+import { useAuth } from "./AuthContext";
+
+const AuthRequired = () => {
+  const user = useAuth();
+  if (!user.token) return <Navigate to="/404" />;
+  return <Outlet />;
+};
+
+export default AuthRequired;

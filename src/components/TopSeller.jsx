@@ -72,72 +72,23 @@ const TopSeller = () => {
                   </a>
                 </div>
                 <div className="top-seller-content">
-                  <a href="author.html">
+                  <a
+                    href="author.html"
+                    style={{ textDecoration: "none", color: "#fff" }}
+                  >
                     <h6 className="name">Brodband</h6>
                   </a>
-                  <span className="count-number">$2500,000</span>
+                  <span
+                    className="count-number"
+                    style={{ textDecoration: "none", color: "#acacac" }}
+                  >
+                    $2500,000
+                  </span>
                 </div>
               </div>
             </div>
           </div>
           {/* <!-- End single top-seller --> */}
-
-          {/* <!-- start single top-seller --> */}
-          <div
-            data-sal="slide-up"
-            data-sal-delay="150"
-            data-sal-duration="800"
-            className="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list sal-animate"
-          >
-            <div className="top-seller-inner-one">
-              <div className="top-seller-wrapper">
-                <div className="thumbnail">
-                  <a href="author.html">
-                    <img
-                      src="assets/images/client/client-2.png"
-                      alt="Nft_Profile"
-                    />
-                  </a>
-                </div>
-                <div className="top-seller-content">
-                  <a href="author.html">
-                    <h6 className="name">Ms. Parkline</h6>
-                  </a>
-                  <span className="count-number">$2300,000</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <!-- End single top-seller --> */}
-
-          {/* <!-- start single top-seller --> */}
-          <div
-            data-sal="slide-up"
-            data-sal-delay="150"
-            data-sal-duration="800"
-            className="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list sal-animate"
-          >
-            <div className="top-seller-inner-one">
-              <div className="top-seller-wrapper">
-                <div className="thumbnail">
-                  <a href="author.html">
-                    <img
-                      src="assets/images/client/client-3.png"
-                      alt="Nft_Profile"
-                    />
-                  </a>
-                </div>
-                <div className="top-seller-content">
-                  <a href="author.html">
-                    <h6 className="name">Methods</h6>
-                  </a>
-                  <span className="count-number">$2100,000</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <!-- End single top-seller --> */}
-
           {/* <!-- start single top-seller --> */}
           <div
             data-sal="slide-up"
@@ -150,184 +101,269 @@ const TopSeller = () => {
                 <div className="thumbnail varified">
                   <a href="author.html">
                     <img
-                      src="assets/images/client/client-4.png"
+                      src="assets/images/client/client-12.png"
                       alt="Nft_Profile"
                     />
                   </a>
                 </div>
                 <div className="top-seller-content">
-                  <a href="author.html">
-                    <h6 className="name">Jone sone</h6>
-                  </a>
-                  <span className="count-number">$2000,000</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <!-- End single top-seller --> */}
-
-          {/* <!-- start single top-seller --> */}
-          <div
-            data-sal="slide-up"
-            data-sal-delay="150"
-            data-sal-duration="800"
-            className="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list sal-animate"
-          >
-            <div className="top-seller-inner-one">
-              <div className="top-seller-wrapper">
-                <div className="thumbnail">
-                  <a href="author.html">
-                    <img
-                      src="assets/images/client/client-5.png"
-                      alt="Nft_Profile"
-                    />
-                  </a>
-                </div>
-                <div className="top-seller-content">
-                  <a href="author.html">
-                    <h6 className="name">Siddhart</h6>
-                  </a>
-                  <span className="count-number">$200,000</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <!-- End single top-seller --> */}
-
-          {/* <!-- start single top-seller --> */}
-          <div
-            data-sal="slide-up"
-            data-sal-delay="150"
-            data-sal-duration="800"
-            className="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list sal-animate"
-          >
-            <div className="top-seller-inner-one">
-              <div className="top-seller-wrapper">
-                <div className="thumbnail varified">
-                  <a href="author.html">
-                    <img
-                      src="assets/images/client/client-6.png"
-                      alt="Nft_Profile"
-                    />
-                  </a>
-                </div>
-                <div className="top-seller-content">
-                  <a href="author.html">
-                    <h6 className="name">Sobuj Mk</h6>
-                  </a>
-                  <span className="count-number">$2000,000</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <!-- End single top-seller --> */}
-
-          {/* <!-- start single top-seller --> */}
-          <div
-            data-sal="slide-up"
-            data-sal-delay="150"
-            data-sal-duration="800"
-            className="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list sal-animate"
-          >
-            <div className="top-seller-inner-one">
-              <div className="top-seller-wrapper">
-                <div className="thumbnail varified">
-                  <a href="author.html">
-                    <img
-                      src="assets/images/client/client-7.png"
-                      alt="Nft_Profile"
-                    />
-                  </a>
-                </div>
-                <div className="top-seller-content">
-                  <a href="author.html">
-                    <h6 className="name">Trodband</h6>
-                  </a>
-                  <span className="count-number">$2500,000</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <!-- End single top-seller --> */}
-
-          {/* <!-- start single top-seller --> */}
-          <div
-            data-sal="slide-up"
-            data-sal-delay="150"
-            data-sal-duration="800"
-            className="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list sal-animate"
-          >
-            <div className="top-seller-inner-one">
-              <div className="top-seller-wrapper">
-                <div className="thumbnail">
-                  <a href="author.html">
-                    <img
-                      src="assets/images/client/client-8.png"
-                      alt="Nft_Profile"
-                    />
-                  </a>
-                </div>
-                <div className="top-seller-content">
-                  <a href="author.html">
-                    <h6 className="name">Yash</h6>
-                  </a>
-                  <span className="count-number">$2500,000</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <!-- End single top-seller --> */}
-
-          {/* <!-- start single top-seller --> */}
-          <div
-            data-sal="slide-up"
-            data-sal-delay="150"
-            data-sal-duration="800"
-            className="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list sal-animate"
-          >
-            <div className="top-seller-inner-one">
-              <div className="top-seller-wrapper">
-                <div className="thumbnail">
-                  <a href="author.html">
-                    <img
-                      src="assets/images/client/client-9.png"
-                      alt="Nft_Profile"
-                    />
-                  </a>
-                </div>
-                <div className="top-seller-content">
-                  <a href="author.html">
-                    <h6 className="name">YASHKIB</h6>
-                  </a>
-                  <span className="count-number">$2500,000</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <!-- End single top-seller --> */}
-
-          {/* <!-- start single top-seller --> */}
-          <div
-            data-sal="slide-up"
-            data-sal-delay="150"
-            data-sal-duration="800"
-            className="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list sal-animate"
-          >
-            <div className="top-seller-inner-one">
-              <div className="top-seller-wrapper">
-                <div className="thumbnail varified">
-                  <a href="author.html">
-                    <img
-                      src="assets/images/client/client-10.png"
-                      alt="Nft_Profile"
-                    />
-                  </a>
-                </div>
-                <div className="top-seller-content">
-                  <a href="author.html">
+                  <a
+                    href="author.html"
+                    style={{ textDecoration: "none", color: "#fff" }}
+                  >
                     <h6 className="name">Brodband</h6>
                   </a>
-                  <span className="count-number">$2500,000</span>
+                  <span
+                    className="count-number"
+                    style={{ textDecoration: "none", color: "#acacac" }}
+                  >
+                    $2500,000
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <!-- End single top-seller --> */}
+          {/* <!-- start single top-seller --> */}
+          <div
+            data-sal="slide-up"
+            data-sal-delay="150"
+            data-sal-duration="800"
+            className="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list sal-animate"
+          >
+            <div className="top-seller-inner-one">
+              <div className="top-seller-wrapper">
+                <div className="thumbnail varified">
+                  <a href="author.html">
+                    <img
+                      src="assets/images/client/client-12.png"
+                      alt="Nft_Profile"
+                    />
+                  </a>
+                </div>
+                <div className="top-seller-content">
+                  <a
+                    href="author.html"
+                    style={{ textDecoration: "none", color: "#fff" }}
+                  >
+                    <h6 className="name">Brodband</h6>
+                  </a>
+                  <span
+                    className="count-number"
+                    style={{ textDecoration: "none", color: "#acacac" }}
+                  >
+                    $2500,000
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <!-- End single top-seller --> */}
+          {/* <!-- start single top-seller --> */}
+          <div
+            data-sal="slide-up"
+            data-sal-delay="150"
+            data-sal-duration="800"
+            className="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list sal-animate"
+          >
+            <div className="top-seller-inner-one">
+              <div className="top-seller-wrapper">
+                <div className="thumbnail varified">
+                  <a href="author.html">
+                    <img
+                      src="assets/images/client/client-12.png"
+                      alt="Nft_Profile"
+                    />
+                  </a>
+                </div>
+                <div className="top-seller-content">
+                  <a
+                    href="author.html"
+                    style={{ textDecoration: "none", color: "#fff" }}
+                  >
+                    <h6 className="name">Brodband</h6>
+                  </a>
+                  <span
+                    className="count-number"
+                    style={{ textDecoration: "none", color: "#acacac" }}
+                  >
+                    $2500,000
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <!-- End single top-seller --> */}
+          {/* <!-- start single top-seller --> */}
+          <div
+            data-sal="slide-up"
+            data-sal-delay="150"
+            data-sal-duration="800"
+            className="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list sal-animate"
+          >
+            <div className="top-seller-inner-one">
+              <div className="top-seller-wrapper">
+                <div className="thumbnail varified">
+                  <a href="author.html">
+                    <img
+                      src="assets/images/client/client-12.png"
+                      alt="Nft_Profile"
+                    />
+                  </a>
+                </div>
+                <div className="top-seller-content">
+                  <a
+                    href="author.html"
+                    style={{ textDecoration: "none", color: "#fff" }}
+                  >
+                    <h6 className="name">Brodband</h6>
+                  </a>
+                  <span
+                    className="count-number"
+                    style={{ textDecoration: "none", color: "#acacac" }}
+                  >
+                    $2500,000
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <!-- End single top-seller --> */}
+          {/* <!-- start single top-seller --> */}
+          <div
+            data-sal="slide-up"
+            data-sal-delay="150"
+            data-sal-duration="800"
+            className="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list sal-animate"
+          >
+            <div className="top-seller-inner-one">
+              <div className="top-seller-wrapper">
+                <div className="thumbnail varified">
+                  <a href="author.html">
+                    <img
+                      src="assets/images/client/client-12.png"
+                      alt="Nft_Profile"
+                    />
+                  </a>
+                </div>
+                <div className="top-seller-content">
+                  <a
+                    href="author.html"
+                    style={{ textDecoration: "none", color: "#fff" }}
+                  >
+                    <h6 className="name">Brodband</h6>
+                  </a>
+                  <span
+                    className="count-number"
+                    style={{ textDecoration: "none", color: "#acacac" }}
+                  >
+                    $2500,000
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <!-- End single top-seller --> */}
+          {/* <!-- start single top-seller --> */}
+          <div
+            data-sal="slide-up"
+            data-sal-delay="150"
+            data-sal-duration="800"
+            className="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list sal-animate"
+          >
+            <div className="top-seller-inner-one">
+              <div className="top-seller-wrapper">
+                <div className="thumbnail varified">
+                  <a href="author.html">
+                    <img
+                      src="assets/images/client/client-12.png"
+                      alt="Nft_Profile"
+                    />
+                  </a>
+                </div>
+                <div className="top-seller-content">
+                  <a
+                    href="author.html"
+                    style={{ textDecoration: "none", color: "#fff" }}
+                  >
+                    <h6 className="name">Brodband</h6>
+                  </a>
+                  <span
+                    className="count-number"
+                    style={{ textDecoration: "none", color: "#acacac" }}
+                  >
+                    $2500,000
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <!-- End single top-seller --> */}
+          {/* <!-- start single top-seller --> */}
+          <div
+            data-sal="slide-up"
+            data-sal-delay="150"
+            data-sal-duration="800"
+            className="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list sal-animate"
+          >
+            <div className="top-seller-inner-one">
+              <div className="top-seller-wrapper">
+                <div className="thumbnail varified">
+                  <a href="author.html">
+                    <img
+                      src="assets/images/client/client-12.png"
+                      alt="Nft_Profile"
+                    />
+                  </a>
+                </div>
+                <div className="top-seller-content">
+                  <a
+                    href="author.html"
+                    style={{ textDecoration: "none", color: "#fff" }}
+                  >
+                    <h6 className="name">Brodband</h6>
+                  </a>
+                  <span
+                    className="count-number"
+                    style={{ textDecoration: "none", color: "#acacac" }}
+                  >
+                    $2500,000
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <!-- End single top-seller --> */}
+          {/* <!-- start single top-seller --> */}
+          <div
+            data-sal="slide-up"
+            data-sal-delay="150"
+            data-sal-duration="800"
+            className="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list sal-animate"
+          >
+            <div className="top-seller-inner-one">
+              <div className="top-seller-wrapper">
+                <div className="thumbnail varified">
+                  <a href="author.html">
+                    <img
+                      src="assets/images/client/client-12.png"
+                      alt="Nft_Profile"
+                    />
+                  </a>
+                </div>
+                <div className="top-seller-content">
+                  <a
+                    href="author.html"
+                    style={{ textDecoration: "none", color: "#fff" }}
+                  >
+                    <h6 className="name">Brodband</h6>
+                  </a>
+                  <span
+                    className="count-number"
+                    style={{ textDecoration: "none", color: "#acacac" }}
+                  >
+                    $2500,000
+                  </span>
                 </div>
               </div>
             </div>
