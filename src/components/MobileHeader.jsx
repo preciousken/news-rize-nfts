@@ -7,7 +7,10 @@ const MobileHeader = () => {
         <div className="header-top">
           <div className="logo logo-custom-css">
             <a className="logo-light" href="index.html">
-              <img src="assets/images/logo/logo-white.png" alt="nft-logo" />
+              <img
+                src="https://stakecoreum.com/static/media/RizeLogo.554ff0543dc4e353cc17.png"
+                alt="nft-logo"
+              />
             </a>
             <a className="logo-dark" href="index.html">
               <img src="assets/images/logo/logo-dark.png" alt="nft-logo" />

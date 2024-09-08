@@ -18,12 +18,12 @@ const Header = () => {
               <div className="logo-thumbnail logo-custom-css">
                 <a className="logo-light" href="index.html">
                   <img
-                    src="/assets/images/logo/logo-white.png"
+                    src="https://stakecoreum.com/static/media/RizeLogo.554ff0543dc4e353cc17.png"
                     alt="nft-logo"
                   />
                 </a>
                 <a className="logo-dark" href="index.html">
-                  <img src="/assets/images/logo/logo-dark.png" alt="nft-logo" />
+                  <img src="https://stakecoreum.com/static/media/RizeLogo.554ff0543dc4e353cc17.png" alt="nft-logo" />
                 </a>
               </div>
               <div className="mainmenu-wrapper">

@@ -11,6 +11,7 @@ import CreateNFT from "./pages/CreateNFT";
 import Activity from './pages/Activity';
 import CreateCollection from './pages/CreateCollection';
 import Author from './pages/Author';
+import EditProfile from './pages/edit_profile';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path='/activity' element={<Activity />} />
           <Route path='/create-collection' element={<CreateCollection />} />
           <Route path='/author' element={<Author />} />
+          <Route path='/edit-profile' element={<EditProfile />} />
         </Routes>
         <Footer />
       </div>
