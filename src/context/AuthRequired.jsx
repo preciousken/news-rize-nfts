@@ -4,7 +4,7 @@ import { useAuth } from "./AuthContext";
 
 const AuthRequired = () => {
   const user = useAuth();
-  if (!user.token) return <Navigate to="/404" />;
+  if (!user.token) return <Navigate to="/" />;
   return <Outlet />;
 };
 
