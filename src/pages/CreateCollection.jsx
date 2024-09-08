@@ -4,7 +4,7 @@ import SubNav from "../components/SubNav";
 const CreateCollection = () => {
   return (
     <div style={{ background: "#13131d" }}>
-      <SubNav />
+      <SubNav title="Create Collection" />
       <div className="creat-collection-area pt--80">
         <div className="container">
           <div className="row g-5 ">

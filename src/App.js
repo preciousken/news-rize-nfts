@@ -12,6 +12,8 @@ import Activity from './pages/Activity';
 import CreateCollection from './pages/CreateCollection';
 import Author from './pages/Author';
 import EditProfile from './pages/edit_profile';
+import Collection from './pages/Collection';
+import ProductDetails from './pages/product-details';
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
           <Route path='/create-collection' element={<CreateCollection />} />
           <Route path='/author' element={<Author />} />
           <Route path='/edit-profile' element={<EditProfile />} />
+          <Route path='/collection' element={<Collection />} />
+          <Route path='/product-details' element={<ProductDetails />} />
         </Routes>
         <Footer />
       </div>

@@ -6,7 +6,7 @@ import CreateNft from "../components/CreateNft";
 const CreateNFT = () => {
   return (
     <div style={{ background: "#13131d" }}>
-      <SubNav />
+      <SubNav title="Mint NFT" />
       <CreateNft />
     </div>
   );

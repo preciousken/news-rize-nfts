@@ -4,7 +4,7 @@ import SubNav from "../components/SubNav";
 const EditProfile = () => {
   return (
     <div style={{ background: "#13131d" }}>
-      <SubNav />
+      <SubNav title="Edit Profile" />
       <div className="edit-profile-area rn-section-gapTop">
         <div className="container">
           <div className="row plr--70 padding-control-edit-wrapper pl_md--0 pr_md--0 pl_sm--0 pr_sm--0">
