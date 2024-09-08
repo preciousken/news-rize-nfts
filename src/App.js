@@ -30,9 +30,9 @@ function App() {
           <div>
             <Header />
             <Routes>
-              <Route element={<AuthRequired />}>
+              {/* <Route element={<AuthRequired />}> */}
                 <Route path="/" element={<Home />} />
-              </Route>
+              {/* </Route> */}
               <Route path='/createnft' element={<CreateNFT />} />
               <Route path='/activity' element={<Activity />} />
               <Route path='/create-collection' element={<CreateCollection />} />
