@@ -14,6 +14,7 @@ import Author from './pages/Author';
 import EditProfile from './pages/edit_profile';
 import Collection from './pages/Collection';
 import ProductDetails from './pages/product-details';
+import PageNotFound from "./pages/PageNotFound"
 
 
 function App() {
@@ -30,6 +31,13 @@ function App() {
           <Route path='/edit-profile' element={<EditProfile />} />
           <Route path='/collection' element={<Collection />} />
           <Route path='/product-details' element={<ProductDetails />} />
+
+
+          {/* 404 page */}
+          <Route
+            path="*"
+            element={<PageNotFound />}
+          />
         </Routes>
         <Footer />
       </div>
