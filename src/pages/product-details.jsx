@@ -1,5 +1,7 @@
 import React from "react";
 import SubNav from "../components/SubNav";
+import CardC from "../components/Cards/Card";
+import Filter from "../components/Filter";
 
 const ProductDetails = () => {
   return (
@@ -16,7 +18,6 @@ const ProductDetails = () => {
                 style={{ top: "100px" }}
               >
                 <div className="pd-tab-inner">
-
                   <div
                     className="tab-content rn-pd-content"
                     id="v-pills-tabContent"
@@ -69,7 +70,12 @@ const ProductDetails = () => {
             <div className="col-lg-5 col-md-12 col-sm-12 mt_md--50 mt_sm--60">
               <div className="rn-pd-content-area">
                 <div className="pd-title-area">
-                  <h4 className="title">The Amazing Game</h4>
+                  <h4
+                    className="title"
+                    style={{ color: "30px", color: "#ffffff" }}
+                  >
+                    The Amazing Game
+                  </h4>
                   <div className="pd-react-area">
                     <div className="heart-count">
                       <svg
@@ -134,10 +140,12 @@ const ProductDetails = () => {
                     </div>
                   </div>
                 </div>
-                <span className="bid">
+                <span className="bid" style={{ color: "#acacac" }}>
                   Height bid <span className="price">0.11wETH</span>
                 </span>
-                <h6 className="title-name">#22 Portal , Info bellow</h6>
+                <h6 className="title-name" style={{ color: "#acacac" }}>
+                  #22 Portal , Info bellow
+                </h6>
                 <div className="catagory-collection">
                   <div className="catagory">
                     <span>
@@ -154,7 +162,10 @@ const ProductDetails = () => {
                           </a>
                         </div>
                         <div className="top-seller-content">
-                          <a href="#">
+                          <a
+                            href="#"
+                            style={{ textDecoration: "none", color: "#fff" }}
+                          >
                             <h6 className="name">Brodband</h6>
                           </a>
                         </div>
@@ -162,7 +173,7 @@ const ProductDetails = () => {
                     </div>
                   </div>
                   <div className="collection">
-                    <span>Collections</span>
+                    <span style={{ fontSize: "14px" }}>Collections</span>
                     <div className="top-seller-inner-one">
                       <div className="top-seller-wrapper">
                         <div className="thumbnail">
@@ -174,7 +185,10 @@ const ProductDetails = () => {
                           </a>
                         </div>
                         <div className="top-seller-content">
-                          <a href="#">
+                          <a
+                            href="#"
+                            style={{ textDecoration: "none", color: "#fff" }}
+                          >
                             <h6 className="name">Brodband</h6>
                           </a>
                         </div>
@@ -182,9 +196,9 @@ const ProductDetails = () => {
                     </div>
                   </div>
                 </div>
-                <a className="btn btn-primary-alta" href="#">
+                {/* <a className="btn btn-primary-alta" href="#">
                   Unlockable content included
-                </a>
+                </a> */}
                 <div className="rn-bid-details">
                   <div className="tab-wrapper-one">
                     <nav className="tab-button-one">
@@ -249,117 +263,71 @@ const ProductDetails = () => {
                               </a>
                             </div>
                             <div className="top-seller-content">
-                              <span>
-                                0.11wETH by <a href="#">Allen Waltker</a>
+                              <span
+                                style={{
+                                  textDecoration: "none",
+                                  color: "#acacac",
+                                }}
+                              >
+                                0.11wETH by{" "}
+                                <a
+                                  href="#"
+                                  style={{
+                                    textDecoration: "none",
+                                    color: "#fff",
+                                  }}
+                                >
+                                  Allen Waltker
+                                </a>
                               </span>
-                              <span className="count-number">1 hours ago</span>
+                              <span
+                                className="count-number"
+                                style={{
+                                  textDecoration: "none",
+                                  color: "#acacac",
+                                }}
+                              >
+                                1 hours ago
+                              </span>
                             </div>
                           </div>
                         </div>
-                        {/* <!-- single creator --> */}
-                        {/* <!-- single creator --> */}
                         <div className="top-seller-inner-one">
                           <div className="top-seller-wrapper">
                             <div className="thumbnail">
                               <a href="#">
                                 <img
-                                  src="assets/images/client/client-4.png"
+                                  src="assets/images/client/client-3.png"
                                   alt="Nft_Profile"
                                 />
                               </a>
                             </div>
                             <div className="top-seller-content">
-                              <span>
-                                0.09wETH by <a href="#">Joe Biden</a>
+                              <span
+                                style={{
+                                  textDecoration: "none",
+                                  color: "#acacac",
+                                }}
+                              >
+                                0.11wETH by{" "}
+                                <a
+                                  href="#"
+                                  style={{
+                                    textDecoration: "none",
+                                    color: "#fff",
+                                  }}
+                                >
+                                  Allen Waltker
+                                </a>
                               </span>
-                              <span className="count-number">
-                                1.30 hours ago
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                        {/* <!-- single creator --> */}
-                        {/* <!-- single creator --> */}
-                        <div className="top-seller-inner-one">
-                          <div className="top-seller-wrapper">
-                            <div className="thumbnail">
-                              <a href="#">
-                                <img
-                                  src="assets/images/client/client-5.png"
-                                  alt="Nft_Profile"
-                                />
-                              </a>
-                            </div>
-                            <div className="top-seller-content">
-                              <span>
-                                0.07wETH by <a href="#">Sonial mridha</a>
-                              </span>
-                              <span className="count-number">
-                                1.35 hours ago
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                        {/* <!-- single creator --> */}
-                        {/* <!-- single creator --> */}
-                        <div className="top-seller-inner-one">
-                          <div className="top-seller-wrapper">
-                            <div className="thumbnail">
-                              <a href="#">
-                                <img
-                                  src="assets/images/client/client-6.png"
-                                  alt="Nft_Profile"
-                                />
-                              </a>
-                            </div>
-                            <div className="top-seller-content">
-                              <span>
-                                0.07wETH by <a href="#">Tribute Dhusra</a>
-                              </span>
-                              <span className="count-number">
-                                1.55 hours ago
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                        {/* <!-- single creator --> */}
-                        {/* <!-- single creator --> */}
-                        <div className="top-seller-inner-one">
-                          <div className="top-seller-wrapper">
-                            <div className="thumbnail">
-                              <a href="#">
-                                <img
-                                  src="assets/images/client/client-7.png"
-                                  alt="Nft_Profile"
-                                />
-                              </a>
-                            </div>
-                            <div className="top-seller-content">
-                              <span>
-                                0.07wETH by <a href="#">Sonia Sobnom</a>
-                              </span>
-                              <span className="count-number">2 hours ago</span>
-                            </div>
-                          </div>
-                        </div>
-                        {/* <!-- single creator --> */}
-                        {/* <!-- single creator --> */}
-                        <div className="top-seller-inner-one">
-                          <div className="top-seller-wrapper">
-                            <div className="thumbnail">
-                              <a href="#">
-                                <img
-                                  src="assets/images/client/client-8.png"
-                                  alt="Nft_Profile"
-                                />
-                              </a>
-                            </div>
-                            <div className="top-seller-content">
-                              <span>
-                                0.02wETH by <a href="#">Sadia Rummon</a>
-                              </span>
-                              <span className="count-number">
-                                2.5 hours ago
+                              <span
+                                className="count-number"
+                                style={{
+                                  textDecoration: "none",
+                                  color: "#acacac",
+                                }}
+                              >
+                                1 hours ago
                               </span>
                             </div>
                           </div>
@@ -375,12 +343,16 @@ const ProductDetails = () => {
                         {/* <!-- single --> */}
                         <div className="rn-pd-bd-wrapper">
                           <div className="top-seller-inner-one">
-                            {/* <!-- <p className="disc">Lorem ipsum dolor, sit amet consectetur adipisicing
-                                                    elit. Doloribus debitis nemo deserunt.</p> --> */}
                             <h6 className="name-title">Owner</h6>
                             <div className="top-seller-wrapper">
                               <div className="thumbnail">
-                                <a href="#">
+                                <a
+                                  href="#"
+                                  style={{
+                                    textDecoration: "none",
+                                    color: "#fff",
+                                  }}
+                                >
                                   <img
                                     src="assets/images/client/client-1.png"
                                     alt="Nft_Profile"
@@ -388,7 +360,13 @@ const ProductDetails = () => {
                                 </a>
                               </div>
                               <div className="top-seller-content">
-                                <a href="#">
+                                <a
+                                  href="#"
+                                  style={{
+                                    textDecoration: "none",
+                                    color: "#fff",
+                                  }}
+                                >
                                   <h6 className="name">Brodband</h6>
                                 </a>
                               </div>
@@ -543,90 +521,72 @@ const ProductDetails = () => {
                               </a>
                             </div>
                             <div className="top-seller-content">
-                              <span>
-                                0.11wETH by<a href="#">Allen Waltker</a>
+                              <span
+                                style={{
+                                  textDecoration: "none",
+                                  color: "#acacac",
+                                }}
+                              >
+                                0.11wETH by{" "}
+                                <a
+                                  href="#"
+                                  style={{
+                                    textDecoration: "none",
+                                    color: "#fff",
+                                  }}
+                                >
+                                  Allen Waltker
+                                </a>
                               </span>
-                              <span className="count-number">1 hours ago</span>
+                              <span
+                                className="count-number"
+                                style={{
+                                  textDecoration: "none",
+                                  color: "#acacac",
+                                }}
+                              >
+                                1 hours ago
+                              </span>
                             </div>
                           </div>
                         </div>
-                        {/* <!-- single creator --> */}
-                        {/* <!-- single creator --> */}
-                        <div className="top-seller-inner-one mt--20">
+                        <div className="top-seller-inner-one">
                           <div className="top-seller-wrapper">
                             <div className="thumbnail">
                               <a href="#">
                                 <img
-                                  src="assets/images/client/client-2.png"
+                                  src="assets/images/client/client-3.png"
                                   alt="Nft_Profile"
                                 />
                               </a>
                             </div>
                             <div className="top-seller-content">
-                              <span>
-                                0.11wETH by<a href="#">Allen Waltker</a>
+                              <span
+                                style={{
+                                  textDecoration: "none",
+                                  color: "#acacac",
+                                }}
+                              >
+                                0.11wETH by{" "}
+                                <a
+                                  href="#"
+                                  style={{
+                                    textDecoration: "none",
+                                    color: "#fff",
+                                  }}
+                                >
+                                  Allen Waltker
+                                </a>
                               </span>
-                              <span className="count-number">1 hours ago</span>
-                            </div>
-                          </div>
-                        </div>
-                        {/* <!-- single creator --> */}
-                        {/* <!-- single creator --> */}
-                        <div className="top-seller-inner-one mt--20">
-                          <div className="top-seller-wrapper">
-                            <div className="thumbnail">
-                              <a href="#">
-                                <img
-                                  src="assets/images/client/client-4.png"
-                                  alt="Nft_Profile"
-                                />
-                              </a>
-                            </div>
-                            <div className="top-seller-content">
-                              <span>
-                                0.11wETH by<a href="#">Allen Waltker</a>
+                              <span
+                                className="count-number"
+                                style={{
+                                  textDecoration: "none",
+                                  color: "#acacac",
+                                }}
+                              >
+                                1 hours ago
                               </span>
-                              <span className="count-number">1 hours ago</span>
-                            </div>
-                          </div>
-                        </div>
-                        {/* <!-- single creator --> */}
-                        {/* <!-- single creator --> */}
-                        <div className="top-seller-inner-one mt--20">
-                          <div className="top-seller-wrapper">
-                            <div className="thumbnail">
-                              <a href="#">
-                                <img
-                                  src="assets/images/client/client-5.png"
-                                  alt="Nft_Profile"
-                                />
-                              </a>
-                            </div>
-                            <div className="top-seller-content">
-                              <span>
-                                0.11wETH by<a href="#">Allen Waltker</a>
-                              </span>
-                              <span className="count-number">1 hours ago</span>
-                            </div>
-                          </div>
-                        </div>
-                        {/* <!-- single creator --> */}
-                        {/* <!-- single creator --> */}
-                        <div className="top-seller-inner-one mt--20">
-                          <div className="top-seller-wrapper">
-                            <div className="thumbnail">
-                              <a href="#">
-                                <img
-                                  src="assets/images/client/client-8.png"
-                                  alt="Nft_Profile"
-                                />
-                              </a>
-                            </div>
-                            <div className="top-seller-content">
-                              <span>
-                                0.11wETH by<a href="#">Allen Waltker</a>
-                              </span>
-                              <span className="count-number">1 hours ago</span>
                             </div>
                           </div>
                         </div>
@@ -637,7 +597,9 @@ const ProductDetails = () => {
                   <div className="place-bet-area">
                     <div className="rn-bet-create">
                       <div className="bid-list winning-bid">
-                        <h6 className="title">Winning bit</h6>
+                        <h6 className="title" style={{ color: "#fff" }}>
+                          Winning bit
+                        </h6>
                         <div className="top-seller-inner-one">
                           <div className="top-seller-wrapper">
                             <div className="thumbnail">
@@ -649,16 +611,35 @@ const ProductDetails = () => {
                               </a>
                             </div>
                             <div className="top-seller-content">
-                              <span className="heighest-bid">
-                                Heighest bid <a href="#">Atif aslam</a>
+                              <span
+                                className="heighest-bid"
+                                style={{ color: "#acacac", fontSize: "14px" }}
+                              >
+                                Heighest bid{" "}
+                                <a
+                                  href="#"
+                                  style={{
+                                    textDecoration: "none",
+                                    color: "#fff",
+                                  }}
+                                >
+                                  Atif aslam
+                                </a>
                               </span>
-                              <span className="count-number">0.115wETH</span>
+                              <span
+                                className="count-number"
+                                style={{ color: "#acacac" }}
+                              >
+                                0.115wETH
+                              </span>
                             </div>
                           </div>
                         </div>
                       </div>
                       <div className="bid-list left-bid">
-                        <h6 className="title">Auction has ended</h6>
+                        <h6 className="title" style={{ color: "#fff" }}>
+                          Auction has ended
+                        </h6>
                         <div
                           className="countdown mt--15"
                           data-date="2025-12-09"
@@ -712,6 +693,18 @@ const ProductDetails = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <Filter />
+
+        <div className="row g-5">
+          <CardC />
+          <CardC />
+          <CardC />
+          <CardC />
+          <CardC />
         </div>
       </div>
     </div>

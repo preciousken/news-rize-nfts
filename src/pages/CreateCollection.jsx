@@ -12,7 +12,7 @@ const CreateCollection = () => {
               <div className="collection-single-wized banner">
                 <label
                   className="title required"
-                  style={{ fontSize: "14px", color: "#cacaca" }}
+                  style={{ fontSize: "14px", color: "#acacac" }}
                 >
                   Logo image
                 </label>
@@ -44,7 +44,7 @@ const CreateCollection = () => {
               <div className="collection-single-wized banner">
                 <label
                   className="title"
-                  style={{ fontSize: "14px", color: "#cacaca" }}
+                  style={{ fontSize: "14px", color: "#acacac" }}
                 >
                   Cover Image
                 </label>
@@ -80,7 +80,7 @@ const CreateCollection = () => {
                       <label
                         for="name"
                         className="title required"
-                        style={{ fontSize: "14px", color: "#cacaca" }}
+                        style={{ fontSize: "14px", color: "#acacac" }}
                       >
                         Name
                       </label>
@@ -99,7 +99,7 @@ const CreateCollection = () => {
                       <label
                         for="url"
                         className="title"
-                        style={{ fontSize: "14px", color: "#cacaca" }}
+                        style={{ fontSize: "14px", color: "#acacac" }}
                       >
                         URL
                       </label>
@@ -117,7 +117,7 @@ const CreateCollection = () => {
                     <div className="collection-single-wized">
                       <label
                         className="title"
-                        style={{ fontSize: "14px", color: "#cacaca" }}
+                        style={{ fontSize: "14px", color: "#acacac" }}
                       >
                         Category
                       </label>
@@ -156,7 +156,7 @@ const CreateCollection = () => {
                       <label
                         for="description"
                         className="title"
-                        style={{ fontSize: "14px", color: "#cacaca" }}
+                        style={{ fontSize: "14px", color: "#acacac" }}
                       >
                         Description
                       </label>
@@ -173,7 +173,7 @@ const CreateCollection = () => {
                       <label
                         for="earning"
                         className="title"
-                        style={{ fontSize: "14px", color: "#cacaca" }}
+                        style={{ fontSize: "14px", color: "#acacac" }}
                       >
                         Creator Earnings
                       </label>
@@ -187,7 +187,7 @@ const CreateCollection = () => {
                       <label
                         for="wallet"
                         className="title"
-                        style={{ fontSize: "14px", color: "#cacaca" }}
+                        style={{ fontSize: "14px", color: "#acacac" }}
                       >
                         Your payout wallet address
                       </label>
