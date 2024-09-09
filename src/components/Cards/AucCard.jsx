@@ -44,7 +44,7 @@ const AucCard = ({ hasCountdown = false }) => {
         <div className="product-share-wrapper">
           <div className="profile-share">
             <a
-              href="author.html"
+              href="author"
               className="avatar"
               data-tooltip="Falak Sabbir"
               tabindex="-1"
@@ -52,7 +52,7 @@ const AucCard = ({ hasCountdown = false }) => {
               <img src="assets/images/client/client-2.png" alt="Nft_Profile" />
             </a>
             <a
-              href="author.html"
+              href="author"
               className="avatar"
               data-tooltip="Sabbir"
               tabindex="-1"
@@ -60,7 +60,7 @@ const AucCard = ({ hasCountdown = false }) => {
               <img src="assets/images/client/client-1.png" alt="Nft_Profile" />
             </a>
             <a
-              href="author.html"
+              href="author"
               className="avatar"
               data-tooltip="Falak"
               tabindex="-1"

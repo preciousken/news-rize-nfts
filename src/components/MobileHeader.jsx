@@ -458,7 +458,7 @@ const MobileHeader = () => {
                           </a>
                         </li>
                         <li>
-                          <a href="author.html">
+                          <a href="author">
                             Author/Profile(User){" "}
                             <svg
                               xmlns="http://www.w3.org/2000/svg"

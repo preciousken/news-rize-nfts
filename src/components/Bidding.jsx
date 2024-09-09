@@ -1,7 +1,43 @@
 import React from "react";
 import AucCard from "./Cards/AucCard";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Bidding = () => {
+  const sliderSettings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4, // Reduce to 3 to allow space for partial views of the 1st and last card
+    slidesToScroll: 1,
+    arrows: true,
+    centerMode: true, // Enable center mode
+    centerPadding: "5%", // Adjust to show half parts of first and last cards
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          centerPadding: "8%", // Adjust for smaller screens
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          centerPadding: "5%", // Adjust for tablet-sized screens
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: "0", // Full width on mobile
+        },
+      },
+    ],
+  };
+
   return (
     <div
       className="rn-live-bidding-area rn-section-gapTop"
@@ -30,25 +66,16 @@ const Bidding = () => {
         </div>
         <div className="row">
           <div className="col-lg-12">
-            <div className="banner-one-slick slick-activation-03 slick-arrow-style-one rn-slick-dot-style slick-gutter-15 slick-initialized slick-slider slick-dotted">
-              <div className="slick-list draggable" style={{ height: "648px" }}>
-                <div
-                  className="slick-track"
-                  style={{
-                    opacity: 1,
-                    width: "6071px",
-                    transform: "translate3d(-467px, 0px, 0px)",
-                  }}
-                >
-                  <AucCard />
-                  <AucCard />
-                  <AucCard hasCountdown={true} />
-                  <AucCard />
-                  <AucCard />
-                  <AucCard />
-                  <AucCard />
-                </div>
-              </div>
+            <div style={{ height: "400px", overflow: "visible" }}>
+              <Slider {...sliderSettings}>
+                <AucCard />
+                <AucCard />
+                <AucCard hasCountdown={true} />
+                <AucCard />
+                <AucCard />
+                <AucCard />
+                <AucCard />
+              </Slider>
             </div>
           </div>
         </div>

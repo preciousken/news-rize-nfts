@@ -1,5 +1,6 @@
 import React from "react";
 import CardC from "../components/Cards/Card";
+import ExploreProduct from "../components/ExploreProduct";
 
 const Author = () => {
   return (
@@ -268,21 +269,13 @@ const Author = () => {
           </div>
           {/* ////////////////....NAV.ENDS... */}
 
-          <div className="tab-content rn-bid-content" id="nav-tabContent">
-            <div
-              className="tab-pane row g-5 d-flex fade"
-              id="nav-home"
-              role="tabpanel"
-              aria-labelledby="nav-home-tab"
-            >
-              {/* <!-- start single product --> */}
-              <CardC />
-              <CardC />
-              <CardC />
-              <CardC />
-              <CardC />
-            </div>
-          </div>
+          <div className="row g-5">
+          <CardC />
+          <CardC />
+          <CardC />
+          <CardC />
+          <CardC />
+        </div>
         </div>
       </div>
     </div>

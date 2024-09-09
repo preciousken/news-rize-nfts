@@ -164,7 +164,7 @@ const Header = () => {
               >
                 <div className="setting-option rn-icon-list user-account">
                   <div className="icon-box">
-                    <a href="author.html">
+                    <a href="author">
                       <img
                         src="assets/images/icons/boy-avater.png"
                         alt="Images"
@@ -173,13 +173,18 @@ const Header = () => {
                     <div className="rn-dropdown">
                       <div className="rn-inner-top">
                         <h4 className="title">
-                          <a href="product-details.html">Christopher William</a>
+                          <a
+                            href="product-details.html"
+                            style={{ color: "#fff" }}
+                          >
+                            Christopher William
+                          </a>
                         </h4>
                         <span>
-                          <a href="#">Set Display Name</a>
+                          <a href="edit-profile">Set Display Name</a>
                         </span>
                       </div>
-                      <div className="rn-product-inner">
+                      {/* <div className="rn-product-inner">
                         <ul className="product-list">
                           <li className="single-product-list">
                             <div className="thumbnail">
@@ -224,19 +229,19 @@ const Header = () => {
                         >
                           Add Your More Funds
                         </a>
-                      </div>
+                      </div> */}
                       <ul className="list-inner">
                         <li>
-                          <a href="author.html">My Profile</a>
+                          <a href="author">My Profile</a>
                         </li>
                         <li>
                           <a href="edit-profile.html">Edit Profile</a>
                         </li>
-                        <li>
+                        {/* <li>
                           <a href="connect.html">Manage funds</a>
-                        </li>
+                        </li> */}
                         <li>
-                          <a href="login.html">Sign Out</a>
+                          <a href="/">Log Out</a>
                         </li>
                       </ul>
                     </div>

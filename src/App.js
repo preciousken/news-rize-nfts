@@ -31,7 +31,7 @@ function App() {
             <Header />
             <Routes>
               {/* <Route element={<AuthRequired />}> */}
-                <Route path="/" element={<Home />} />
+              <Route path="/" element={<Home />} />
               {/* </Route> */}
               <Route path='/createnft' element={<CreateNFT />} />
               <Route path='/activity' element={<Activity />} />

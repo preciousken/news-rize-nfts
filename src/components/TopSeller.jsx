@@ -64,7 +64,7 @@ const TopSeller = () => {
             <div className="top-seller-inner-one">
               <div className="top-seller-wrapper">
                 <div className="thumbnail varified">
-                  <a href="author.html">
+                  <a href="author">
                     <img
                       src="assets/images/client/client-12.png"
                       alt="Nft_Profile"
@@ -73,7 +73,7 @@ const TopSeller = () => {
                 </div>
                 <div className="top-seller-content">
                   <a
-                    href="author.html"
+                    href="author"
                     style={{ textDecoration: "none", color: "#fff" }}
                   >
                     <h6 className="name">Brodband</h6>
@@ -99,7 +99,7 @@ const TopSeller = () => {
             <div className="top-seller-inner-one">
               <div className="top-seller-wrapper">
                 <div className="thumbnail varified">
-                  <a href="author.html">
+                  <a href="author">
                     <img
                       src="assets/images/client/client-12.png"
                       alt="Nft_Profile"
@@ -108,7 +108,7 @@ const TopSeller = () => {
                 </div>
                 <div className="top-seller-content">
                   <a
-                    href="author.html"
+                    href="author"
                     style={{ textDecoration: "none", color: "#fff" }}
                   >
                     <h6 className="name">Brodband</h6>
@@ -134,7 +134,7 @@ const TopSeller = () => {
             <div className="top-seller-inner-one">
               <div className="top-seller-wrapper">
                 <div className="thumbnail varified">
-                  <a href="author.html">
+                  <a href="author">
                     <img
                       src="assets/images/client/client-12.png"
                       alt="Nft_Profile"
@@ -143,7 +143,7 @@ const TopSeller = () => {
                 </div>
                 <div className="top-seller-content">
                   <a
-                    href="author.html"
+                    href="author"
                     style={{ textDecoration: "none", color: "#fff" }}
                   >
                     <h6 className="name">Brodband</h6>
@@ -169,7 +169,7 @@ const TopSeller = () => {
             <div className="top-seller-inner-one">
               <div className="top-seller-wrapper">
                 <div className="thumbnail varified">
-                  <a href="author.html">
+                  <a href="author">
                     <img
                       src="assets/images/client/client-12.png"
                       alt="Nft_Profile"
@@ -178,7 +178,7 @@ const TopSeller = () => {
                 </div>
                 <div className="top-seller-content">
                   <a
-                    href="author.html"
+                    href="author"
                     style={{ textDecoration: "none", color: "#fff" }}
                   >
                     <h6 className="name">Brodband</h6>
@@ -204,7 +204,7 @@ const TopSeller = () => {
             <div className="top-seller-inner-one">
               <div className="top-seller-wrapper">
                 <div className="thumbnail varified">
-                  <a href="author.html">
+                  <a href="author">
                     <img
                       src="assets/images/client/client-12.png"
                       alt="Nft_Profile"
@@ -213,7 +213,7 @@ const TopSeller = () => {
                 </div>
                 <div className="top-seller-content">
                   <a
-                    href="author.html"
+                    href="author"
                     style={{ textDecoration: "none", color: "#fff" }}
                   >
                     <h6 className="name">Brodband</h6>
@@ -239,7 +239,7 @@ const TopSeller = () => {
             <div className="top-seller-inner-one">
               <div className="top-seller-wrapper">
                 <div className="thumbnail varified">
-                  <a href="author.html">
+                  <a href="author">
                     <img
                       src="assets/images/client/client-12.png"
                       alt="Nft_Profile"
@@ -248,7 +248,7 @@ const TopSeller = () => {
                 </div>
                 <div className="top-seller-content">
                   <a
-                    href="author.html"
+                    href="author"
                     style={{ textDecoration: "none", color: "#fff" }}
                   >
                     <h6 className="name">Brodband</h6>
@@ -274,7 +274,7 @@ const TopSeller = () => {
             <div className="top-seller-inner-one">
               <div className="top-seller-wrapper">
                 <div className="thumbnail varified">
-                  <a href="author.html">
+                  <a href="author">
                     <img
                       src="assets/images/client/client-12.png"
                       alt="Nft_Profile"
@@ -283,7 +283,7 @@ const TopSeller = () => {
                 </div>
                 <div className="top-seller-content">
                   <a
-                    href="author.html"
+                    href="author"
                     style={{ textDecoration: "none", color: "#fff" }}
                   >
                     <h6 className="name">Brodband</h6>
@@ -309,7 +309,7 @@ const TopSeller = () => {
             <div className="top-seller-inner-one">
               <div className="top-seller-wrapper">
                 <div className="thumbnail varified">
-                  <a href="author.html">
+                  <a href="author">
                     <img
                       src="assets/images/client/client-12.png"
                       alt="Nft_Profile"
@@ -318,7 +318,7 @@ const TopSeller = () => {
                 </div>
                 <div className="top-seller-content">
                   <a
-                    href="author.html"
+                    href="author"
                     style={{ textDecoration: "none", color: "#fff" }}
                   >
                     <h6 className="name">Brodband</h6>
@@ -344,7 +344,7 @@ const TopSeller = () => {
             <div className="top-seller-inner-one">
               <div className="top-seller-wrapper">
                 <div className="thumbnail varified">
-                  <a href="author.html">
+                  <a href="author">
                     <img
                       src="assets/images/client/client-12.png"
                       alt="Nft_Profile"
@@ -353,7 +353,7 @@ const TopSeller = () => {
                 </div>
                 <div className="top-seller-content">
                   <a
-                    href="author.html"
+                    href="author"
                     style={{ textDecoration: "none", color: "#fff" }}
                   >
                     <h6 className="name">Brodband</h6>

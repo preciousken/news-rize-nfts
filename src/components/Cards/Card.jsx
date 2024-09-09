@@ -14,7 +14,7 @@ const CardC = ({ cls = null }) => {
     >
       <div className="product-style-one no-overlay">
         <div className="card-thumbnail">
-          <a href="product-details.html">
+          <a href="product-details">
             <img
               src="assets/images/portfolio/portfolio-01.jpg"
               alt="NFT_portfolio"
@@ -23,16 +23,20 @@ const CardC = ({ cls = null }) => {
         </div>
         <div className="product-share-wrapper">
           <div className="profile-share">
-            <a href="author.html" className="avatar" data-tooltip="Jone lee">
+            <a href="author" className="avatar" data-tooltip="Jone lee">
               <img src="assets/images/client/client-1.png" alt="Nft_Profile" />
             </a>
-            <a href="author.html" className="avatar" data-tooltip="Jone Due">
+            <a href="author" className="avatar" data-tooltip="Jone Due">
               <img src="assets/images/client/client-2.png" alt="Nft_Profile" />
             </a>
-            <a href="author.html" className="avatar" data-tooltip="Nisat Tara">
+            <a href="author" className="avatar" data-tooltip="Nisat Tara">
               <img src="assets/images/client/client-3.png" alt="Nft_Profile" />
             </a>
-            <a className="more-author-text" href="#" style={{color:"#acacac",textDecoration:"none"}}>
+            <a
+              className="more-author-text"
+              href="javascript:void(0)"
+              style={{ color: "#acacac", textDecoration: "none" }}
+            >
               9+ Place Bit.
             </a>
           </div>
@@ -81,10 +85,20 @@ const CardC = ({ cls = null }) => {
             </div>
           </div>
         </div>
-        <a href="product-details.html">
-          <span className="product-name"style={{color:"#00a3ff",textDecoration:"none"}}>Preatent</span>
+        <a href="product-details">
+          <span
+            className="product-name"
+            style={{ color: "#00a3ff", textDecoration: "none" }}
+          >
+            Preatent
+          </span>
         </a>
-        <span className="latest-bid" style={{color:"#acacac",textDecoration:"none",fontSize:"12px"}}>Highest bid 1/20</span>
+        <span
+          className="latest-bid"
+          style={{ color: "#acacac", textDecoration: "none", fontSize: "12px" }}
+        >
+          Highest bid 1/20
+        </span>
         <div className="bid-react-area">
           <div className="last-bid">0.244wETH</div>
           <div className="react-area">

@@ -133,7 +133,9 @@ const Activity = () => {
                 style={{ top: "100px" }}
               >
                 <div className="inner">
-                  <h3>Market filter</h3>
+                  <h3 style={{ fontSize: "14px", color: "#fff" }}>
+                    Market filter
+                  </h3>
                   <div className="sing-filter">
                     <button>Purchases</button>
                     <button>Sales</button>
@@ -144,7 +146,9 @@ const Activity = () => {
                   </div>
                 </div>
                 <div className="inner">
-                  <h3>Filter by users</h3>
+                  <h3 style={{ fontSize: "14px", color: "#fff" }}>
+                    Filter by users
+                  </h3>
                   <div className="sing-filter">
                     <button>Love</button>
                     <button>Saved</button>

@@ -9,8 +9,13 @@ const EditProfile = () => {
         <div className="container">
           <div className="row plr--70 padding-control-edit-wrapper pl_md--0 pr_md--0 pl_sm--0 pr_sm--0">
             <div className="col-12 d-flex justify-content-between mb--30 align-items-center">
-              <h4 className="title-left">Edit Your Profile</h4>
-              <a href="author.html" className="btn btn-primary ml--10">
+              <h4
+                className="title-left"
+                style={{ fontSize: "14px", color: "#fff" }}
+              >
+                Edit Your Profile
+              </h4>
+              <a href="author" className="btn btn-primary ml--10">
                 <i className="feather-eye mr--5"></i> Preview
               </a>
             </div>
@@ -93,7 +98,12 @@ const EditProfile = () => {
                     <div className="profile-change row g-5">
                       <div className="profile-left col-lg-4">
                         <div className="profile-image mb--30">
-                          <h6 className="title">Change Your Profile Picture</h6>
+                          <h6
+                            className="title"
+                            style={{ fontSize: "14px", color: "#fff" }}
+                          >
+                            Change Your Profile Picture
+                          </h6>
                           <img
                             id="rbtinput1"
                             src="https://rainbowit.net/html/nuron/assets/images/profile/profile-01.jpg"
@@ -116,7 +126,12 @@ const EditProfile = () => {
 
                       <div className="profile-left right col-lg-8">
                         <div className="profile-image mb--30">
-                          <h6 className="title">Change Your Cover Photo</h6>
+                          <h6
+                            className="title"
+                            style={{ fontSize: "14px", color: "#fff" }}
+                          >
+                            Change Your Cover Photo
+                          </h6>
                           <img
                             id="rbtinput2"
                             src="https://rainbowit.net/html/nuron/assets/images/profile/cover-04.png"
@@ -153,7 +168,11 @@ const EditProfile = () => {
                     <div className="profile-form-wrapper">
                       <div className="input-two-wrapper mb--15">
                         <div className="first-name half-wid">
-                          <label for="contact-name" className="form-label">
+                          <label
+                            for="contact-name"
+                            className="form-label"
+                            style={{ fontSize: "14px", color: "#fff" }}
+                          >
                             First Name
                           </label>
                           <input
@@ -163,7 +182,10 @@ const EditProfile = () => {
                             value="Mr."
                           />
                         </div>
-                        <div className="last-name half-wid">
+                        <div
+                          className="last-name half-wid"
+                          style={{ fontSize: "14px", color: "#fff" }}
+                        >
                           <label for="contact-name-last" className="form-label">
                             Last Name
                           </label>
@@ -175,7 +197,10 @@ const EditProfile = () => {
                           />
                         </div>
                       </div>
-                      <div className="email-area">
+                      <div
+                        className="email-area"
+                        style={{ fontSize: "14px", color: "#fff" }}
+                      >
                         <label for="Email" className="form-label">
                           Edit Your Email
                         </label>
@@ -189,7 +214,10 @@ const EditProfile = () => {
                     </div>
 
                     {/* <!-- edit bio area Start--> */}
-                    <div className="edit-bio-area mt--20">
+                    <div
+                      className="edit-bio-area mt--20"
+                      style={{ fontSize: "14px", color: "#fff" }}
+                    >
                       <label for="Discription" className="form-label">
                         Edit Your Bio
                       </label>
@@ -202,7 +230,10 @@ const EditProfile = () => {
                     {/* <!--  --> */}
                     <div className="input-two-wrapepr-prifile">
                       {/* <!-- start Role area --> */}
-                      <div className="role-area mt--15">
+                      <div
+                        className="role-area mt--15"
+                        style={{ fontSize: "14px", color: "#fff" }}
+                      >
                         <label for="Role" className="form-label mb--10">
                           Your Role
                         </label>
@@ -227,6 +258,7 @@ const EditProfile = () => {
                       <div
                         className="nice-select profile-edit-select"
                         tabindex="0"
+                        style={{ fontSize: "14px", color: "#fff" }}
                       >
                         <span className="current">Select Your Gender</span>
                         <ul className="list">
@@ -287,7 +319,10 @@ const EditProfile = () => {
                         </div>
                         {/* <!-- end gender --> */}
                       </div>
-                      <div className="half-wid phone-number">
+                      <div
+                        className="half-wid phone-number"
+                        style={{ fontSize: "14px", color: "#fff" }}
+                      >
                         <label for="PhoneNumber" className="form-label">
                           Phone Number
                         </label>
@@ -336,7 +371,10 @@ const EditProfile = () => {
                         </div>
                         {/* <!-- end gender --> */}
                       </div>
-                      <div className="half-wid phone-number">
+                      <div
+                        className="half-wid phone-number"
+                        style={{ fontSize: "14px", color: "#fff" }}
+                      >
                         <label for="PhoneNumbers" className="form-label">
                           Address
                         </label>
@@ -378,7 +416,12 @@ const EditProfile = () => {
                   {/* <!-- change password area Start --> */}
                   <div className="nuron-information">
                     <div className="condition">
-                      <h5 className="title">Create Your Password</h5>
+                      <h5
+                        className="title"
+                        style={{ fontSize: "14px", color: "#fff" }}
+                      >
+                        Create Your Password
+                      </h5>
                       <p className="condition">
                         Passwords are a critical part of information and network
                         security. Passwords serve to protect user accounts but a
@@ -386,7 +429,10 @@ const EditProfile = () => {
                         entire network at risk.
                       </p>
                       <hr />
-                      <div className="email-area">
+                      <div
+                        className="email-area"
+                        style={{ fontSize: "14px", color: "#fff" }}
+                      >
                         <label for="Email2" className="form-label">
                           Enter Email
                         </label>
@@ -394,20 +440,27 @@ const EditProfile = () => {
                       </div>
                     </div>
                     <div className="input-two-wrapper mt--15">
-                      <div className="old-password half-wid">
+                      <div
+                        className="old-password half-wid"
+                        style={{ fontSize: "14px", color: "#fff" }}
+                      >
                         <label for="oldPass" className="form-label">
                           Enter Old Password
                         </label>
                         <input name="pass" id="oldPass" type="password" />
                       </div>
-                      <div className="new-password half-wid">
+                      <div className="new-password half-wid"
+                style={{ fontSize: "14px", color: "#fff" }}>
                         <label for="NewPass" className="form-label">
                           Create New Password
                         </label>
                         <input name="password" id="NewPass" type="password" />
                       </div>
                     </div>
-                    <div className="email-area mt--15">
+                    <div
+                      className="email-area mt--15"
+                      style={{ fontSize: "14px", color: "#fff" }}
+                    >
                       <label for="rePass" className="form-label">
                         Confirm Password
                       </label>

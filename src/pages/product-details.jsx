@@ -1,7 +1,5 @@
 import React from "react";
 import SubNav from "../components/SubNav";
-import CardC from "../components/Cards/Card";
-import Filter from "../components/Filter";
 
 const ProductDetails = () => {
   return (
@@ -693,18 +691,6 @@ const ProductDetails = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="container">
-        <Filter />
-
-        <div className="row g-5">
-          <CardC />
-          <CardC />
-          <CardC />
-          <CardC />
-          <CardC />
         </div>
       </div>
     </div>

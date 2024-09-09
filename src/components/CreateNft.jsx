@@ -17,7 +17,12 @@ const CreateNft = () => {
               {/* <!-- file upload area --> */}
               <div className="upload-area">
                 <div className="upload-formate mb--30">
-                  <h6 className="title">Upload file</h6>
+                  <h6
+                    className="title"
+                    style={{ fontSize: "14px", color: "#fff" }}
+                  >
+                    Upload file
+                  </h6>
                   <p className="formate">Drag or choose your file to upload</p>
                 </div>
 
@@ -47,16 +52,22 @@ const CreateNft = () => {
               </div>
               {/* <!-- end upoad file area --> */}
 
-              <div className="mt--100 mt_sm--30 mt_md--30 d-none d-lg-block">
-                <h5> Note: </h5>
+              <div
+                className="mt--100 mt_sm--30 mt_md--30 d-none d-lg-block"
+                style={{ fontSize: "12px", color: "#acacac" }}
+              >
+                <h5 style={{ fontSize: "14px", color: "#fff" }}> Note: </h5>
                 <span>
                   {" "}
-                  Service fee : <strong>2.5%</strong>{" "}
+                  Service fee : <strong style={{ color: "#fff" }}>
+                    2.5%
+                  </strong>{" "}
                 </span>{" "}
                 <br />
                 <span>
                   {" "}
-                  You will receive : <strong>25.00 ETH $50,000</strong>
+                  You will receive :{" "}
+                  <strong style={{ color: "#fff" }}>25.00 ETH $50,000</strong>
                 </span>
               </div>
             </div>
@@ -66,7 +77,11 @@ const CreateNft = () => {
                 <form className="row" action="#">
                   <div className="col-md-12">
                     <div className="input-box pb--20">
-                      <label for="name" className="form-label">
+                      <label
+                        for="name"
+                        className="form-label"
+                        style={{ fontSize: "14px", color: "#fff" }}
+                      >
                         Product Name
                       </label>
                       <input
@@ -78,7 +93,11 @@ const CreateNft = () => {
 
                   <div className="col-md-12">
                     <div className="input-box pb--20">
-                      <label for="Discription" className="form-label">
+                      <label
+                        for="Discription"
+                        className="form-label"
+                        style={{ fontSize: "14px", color: "#fff" }}
+                      >
                         Discription
                       </label>
                       <textarea
@@ -91,7 +110,11 @@ const CreateNft = () => {
 
                   <div className="col-md-4">
                     <div className="input-box pb--20">
-                      <label for="dollerValue" className="form-label">
+                      <label
+                        for="dollerValue"
+                        className="form-label"
+                        style={{ fontSize: "14px", color: "#fff" }}
+                      >
                         Item Price in $
                       </label>
                       <input id="dollerValue" placeholder="e. g. `20$`" />
@@ -100,7 +123,11 @@ const CreateNft = () => {
 
                   <div className="col-md-4">
                     <div className="input-box pb--20">
-                      <label for="Size" className="form-label">
+                      <label
+                        for="Size"
+                        className="form-label"
+                        style={{ fontSize: "14px", color: "#fff" }}
+                      >
                         Size
                       </label>
                       <input id="Size" placeholder="e. g. `Size`" />
@@ -109,7 +136,11 @@ const CreateNft = () => {
 
                   <div className="col-md-4">
                     <div className="input-box pb--20">
-                      <label for="Propertie" className="form-label">
+                      <label
+                        for="Propertie"
+                        className="form-label"
+                        style={{ fontSize: "14px", color: "#fff" }}
+                      >
                         Propertie
                       </label>
                       <input id="Propertie" placeholder="e. g. `Propertie`" />
@@ -118,7 +149,11 @@ const CreateNft = () => {
 
                   <div className="col-md-12">
                     <div className="input-box pb--20">
-                      <label for="Royality" className="form-label">
+                      <label
+                        for="Royality"
+                        className="form-label"
+                        style={{ fontSize: "14px", color: "#fff" }}
+                      >
                         Royality
                       </label>
                       <input id="Royality" placeholder="e. g. `20%`" />
@@ -132,7 +167,11 @@ const CreateNft = () => {
                         type="checkbox"
                         id="putonsale"
                       />
-                      <label className="rn-check-box-label" for="putonsale">
+                      <label
+                        className="rn-check-box-label"
+                        for="putonsale"
+                        style={{ fontSize: "14px", color: "#fff" }}
+                      >
                         Put on Sale
                       </label>
                     </div>
@@ -148,6 +187,7 @@ const CreateNft = () => {
                       <label
                         className="rn-check-box-label"
                         for="instantsaleprice"
+                        style={{ fontSize: "14px", color: "#fff" }}
                       >
                         Instant Sale Price
                       </label>
@@ -164,6 +204,7 @@ const CreateNft = () => {
                       <label
                         className="rn-check-box-label"
                         for="unlockpurchased"
+                        style={{ fontSize: "14px", color: "#fff" }}
                       >
                         Unlock Purchased
                       </label>
