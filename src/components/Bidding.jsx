@@ -63,6 +63,7 @@ const Bidding = () => {
               </h3>
             </div>
           </div>
+          {/*  */}
         </div>
         <div className="row">
           <div className="col-lg-12">
