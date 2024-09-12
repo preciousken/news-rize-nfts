@@ -82,7 +82,7 @@ const Header = () => {
                           </a>
                         </li>
                         <li>
-                          <a href="product-details">
+                          <a href="nft-details">
                             Product Details
                             <i className="feather-fast-forward"></i>
                           </a>
@@ -138,13 +138,14 @@ const Header = () => {
                 //   style={{ display: "none" }}
               >
                 <div className="icon-box">
-                  <a
-                    id="connectbtn"
+                  <button
+                    type="button"
+                    // id="connectbtn"
                     className="btn btn-primary-alta btn-small"
-                    href="connect.html"
+                    onClick={() => console.log ("connecting wallet...")}
                   >
                     Wallet connect
-                  </a>
+                  </button>
                 </div>
               </div>
 
@@ -174,7 +175,7 @@ const Header = () => {
                       <div className="rn-inner-top">
                         <h4 className="title">
                           <a
-                            href="product-details.html"
+                            href="nft-details.html"
                             style={{ color: "#fff" }}
                           >
                             Christopher William
@@ -188,7 +189,7 @@ const Header = () => {
                         <ul className="product-list">
                           <li className="single-product-list">
                             <div className="thumbnail">
-                              <a href="product-details.html">
+                              <a href="nft-details.html">
                                 <img
                                   src="assets/images/portfolio/portfolio-07.jpg"
                                   alt="Nft Product Images"
@@ -197,7 +198,7 @@ const Header = () => {
                             </div>
                             <div className="content">
                               <h6 className="title">
-                                <a href="product-details.html">Balance</a>
+                                <a href="nft-details.html">Balance</a>
                               </h6>
                               <span className="price">25 ETH</span>
                             </div>
@@ -205,7 +206,7 @@ const Header = () => {
                           </li>
                           <li className="single-product-list">
                             <div className="thumbnail">
-                              <a href="product-details.html">
+                              <a href="nft-details.html">
                                 <img
                                   src="assets/images/portfolio/portfolio-01.jpg"
                                   alt="Nft Product Images"
@@ -214,7 +215,7 @@ const Header = () => {
                             </div>
                             <div className="content">
                               <h6 className="title">
-                                <a href="product-details.html">Balance</a>
+                                <a href="nft-details.html">Balance</a>
                               </h6>
                               <span className="price">25 ETH</span>
                             </div>

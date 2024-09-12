@@ -8,7 +8,7 @@ const ColCard = () => {
       data-sal-duration="800"
       className="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12 sal-animate"
     >
-      <a href="product-details.html" className="rn-collection-inner-one">
+      <a href="nft-details.html" className="rn-collection-inner-one">
         <div className="collection-wrapper">
           <div className="collection-big-thumbnail">
             <img

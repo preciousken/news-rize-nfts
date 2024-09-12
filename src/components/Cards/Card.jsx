@@ -14,7 +14,7 @@ const CardC = ({ cls = null }) => {
     >
       <div className="product-style-one no-overlay">
         <div className="card-thumbnail">
-          <a href="product-details">
+          <a href="nft-details">
             <img
               src="assets/images/portfolio/portfolio-01.jpg"
               alt="NFT_portfolio"
@@ -85,7 +85,7 @@ const CardC = ({ cls = null }) => {
             </div>
           </div>
         </div>
-        <a href="product-details">
+        <a href="nft-details">
           <span
             className="product-name"
             style={{ color: "#00a3ff", textDecoration: "none" }}

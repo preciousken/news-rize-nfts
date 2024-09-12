@@ -16,7 +16,7 @@ const Hero = () => {
               data-sal-duration="800"
               style={{ color: "#ffffff" }}
             >
-              Discover Digital Art, Collect and Sell Your Specific NFTs.
+              PREMIER NFT MARKETPLACE
             </h2>
             <p
               className="slide-disc sal-animate"
@@ -25,8 +25,7 @@ const Hero = () => {
               data-sal-duration="800"
               style={{ color: "#acacac" }}
             >
-              Partner with one of the world’s largest retailers to showcase your
-              brand and products.
+              XRP, Coreum, AVAX, BSC, Polygon, and ETH
             </p>
             <div className="button-group">
               <a

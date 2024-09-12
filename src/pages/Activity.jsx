@@ -30,7 +30,7 @@ const Activity = () => {
                   <div className="inner">
                     <div className="read-content">
                       <div className="thumbnail">
-                        <a href="product-details.html">
+                        <a href="nft-details.html">
                           <img
                             src="https://rainbowit.net/html/nuron/assets/images/activity/activity-01.jpg"
                             alt="Nft_Profile"
@@ -38,7 +38,7 @@ const Activity = () => {
                         </a>
                       </div>
                       <div className="content">
-                        <a href="product-details.html">
+                        <a href="nft-details.html">
                           <h6
                             className="title"
                             style={{ fontSize: "20px", color: "#ffffff" }}

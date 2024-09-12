@@ -14,7 +14,7 @@ const AucCard = ({ hasCountdown = false }) => {
     >
       <div className="product-style-one">
         <div className="card-thumbnail">
-          <a href="product-details.html" tabindex="-1">
+          <a href="nft-details.html" tabindex="-1">
             <img
               src="assets/images/portfolio/portfolio-04.jpg"
               alt="NFT_portfolio"
@@ -116,7 +116,7 @@ const AucCard = ({ hasCountdown = false }) => {
             </div>
           </div>
         </div>
-        <a href="product-details.html" tabindex="-1">
+        <a href="nft-details.html" tabindex="-1">
           <span className="product-name">Morgan11</span>
         </a>
         <span className="latest-bid">Highest bid 3/16</span>
