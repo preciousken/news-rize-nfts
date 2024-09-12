@@ -1,42 +1,75 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AucCard from "./Cards/AucCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { config } from "../config";
+// import axios from "axios";
 
 const Bidding = () => {
   const sliderSettings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 4, // Reduce to 3 to allow space for partial views of the 1st and last card
+    slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
-    centerMode: true, // Enable center mode
-    centerPadding: "5%", // Adjust to show half parts of first and last cards
+    autoplay: true,
+    autoplaySpeed: 1000,
+    centerMode: true,
+    centerPadding: "5%",
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          centerPadding: "8%", // Adjust for smaller screens
+          centerPadding: "8%",
         },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          centerPadding: "5%", // Adjust for tablet-sized screens
+          centerPadding: "5%",
         },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          centerPadding: "0", // Full width on mobile
+          centerPadding: "0",
         },
       },
     ],
   };
+
+  const [items, setItems] = useState([]);
+
+  const getPopularItems = async () => {
+    try {
+      const response = await fetch(
+        `${config.API_URL}api/item/getPopularItems`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ limit: 6 }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.code === 0) {
+        setItems(data.data || []);
+      }
+    } catch (error) {
+      console.log("getPopularItems() error ===> ", error);
+    }
+  };
+
+  useEffect(() => {
+    getPopularItems();
+  }, []);
 
   return (
     <div
@@ -59,7 +92,7 @@ const Bidding = () => {
                   fontWeight: "bolder",
                 }}
               >
-                Live Bidding
+                Active NFTS
               </h3>
             </div>
           </div>
@@ -69,13 +102,9 @@ const Bidding = () => {
           <div className="col-lg-12">
             <div style={{ height: "400px", overflow: "visible" }}>
               <Slider {...sliderSettings}>
-                <AucCard />
-                <AucCard />
-                <AucCard hasCountdown={true} />
-                <AucCard />
-                <AucCard />
-                <AucCard />
-                <AucCard />
+                {items.map((item) => {
+                  return <AucCard item={item} />;
+                })}
               </Slider>
             </div>
           </div>

@@ -16,7 +16,7 @@ import { isDeliverTxFailure } from "@cosmjs/stargate";
 import {
   convertDenomToMicroDenom,
   convertMicroDenomToDenom,
-} from "../lib/utils.js";
+} from "../lib/utils";
 import { isEmpty } from "../lib/methods.js";
 // import { useAppDispatch } from "../app/hooks.ts";
 // import {
