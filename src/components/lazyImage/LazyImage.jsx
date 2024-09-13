@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 
-function LazyLoadImage({ src, alt = "", placeholder }) {
+function LazyLoadImage({ src, alt = "Nft_Profile", placeholder }) {
   const [isVisible, setIsVisible] = useState(false);
   const imgRef = useRef(null);
 

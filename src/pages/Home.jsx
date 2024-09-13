@@ -7,6 +7,7 @@ import NewestI from "../components/NewestI";
 import TopSeller from "../components/TopSeller";
 import ExploreProduct from "../components/ExploreProduct";
 import TopCollection from "../components/TopCol";
+import _TopCol from "../components/_TopCol";
 
 const Home = () => {
   return (
@@ -16,8 +17,9 @@ const Home = () => {
       {/* <Steps /> */}
       <NewestI />
       <TopSeller />
-      <ExploreProduct />
+      {/* <ExploreProduct /> */}
       <TopCollection />
+      {/* <_TopCol /> */}
     </>
   );
 };
