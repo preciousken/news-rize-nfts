@@ -3,7 +3,10 @@ import React from "react";
 import "./css/Footer.css";
 const Footer = () => {
   return (
-    <footer className="footer-section" style={{ background: "#13131d" }}>
+    <footer className="footer-section" style={{ 
+        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+      }}
+>
       <div className="copyright-area">
         <div className="container">
           <div className="row">

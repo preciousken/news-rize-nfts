@@ -10,7 +10,10 @@ const Header = () => {
       <MobileHeader />
       <header
         className="rn-header haeder-default header--sticky"
-        style={{ background: "#13131d" }}
+        style={{ 
+        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+      }}
+
       >
         <div className="container">
           <div className="header-inner">
@@ -175,7 +178,7 @@ const Header = () => {
                       <div className="rn-inner-top">
                         <h4 className="title">
                           <a
-                            href="nft-details.html"
+                            href="nft-details"
                             style={{ color: "#fff" }}
                           >
                             Christopher William
@@ -189,7 +192,7 @@ const Header = () => {
                         <ul className="product-list">
                           <li className="single-product-list">
                             <div className="thumbnail">
-                              <a href="nft-details.html">
+                              <a href="nft-details">
                                 <img
                                   src="assets/images/portfolio/portfolio-07.jpg"
                                   alt="Nft Product Images"
@@ -198,7 +201,7 @@ const Header = () => {
                             </div>
                             <div className="content">
                               <h6 className="title">
-                                <a href="nft-details.html">Balance</a>
+                                <a href="nft-details">Balance</a>
                               </h6>
                               <span className="price">25 ETH</span>
                             </div>
@@ -206,7 +209,7 @@ const Header = () => {
                           </li>
                           <li className="single-product-list">
                             <div className="thumbnail">
-                              <a href="nft-details.html">
+                              <a href="nft-details">
                                 <img
                                   src="assets/images/portfolio/portfolio-01.jpg"
                                   alt="Nft Product Images"
@@ -215,7 +218,7 @@ const Header = () => {
                             </div>
                             <div className="content">
                               <h6 className="title">
-                                <a href="nft-details.html">Balance</a>
+                                <a href="nft-details">Balance</a>
                               </h6>
                               <span className="price">25 ETH</span>
                             </div>

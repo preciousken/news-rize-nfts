@@ -5,7 +5,10 @@ const Activity = () => {
   return (
     <div
       className="rn-activity-area rn-section-gapTop"
-      style={{ background: "#13131d" }}
+      style={{ 
+        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+      }}
+
     >
       <div className="container">
         <div className="row mb--30">
@@ -30,7 +33,7 @@ const Activity = () => {
                   <div className="inner">
                     <div className="read-content">
                       <div className="thumbnail">
-                        <a href="nft-details.html">
+                        <a href="nft-details">
                           <img
                             src="https://rainbowit.net/html/nuron/assets/images/activity/activity-01.jpg"
                             alt="Nft_Profile"
@@ -38,7 +41,7 @@ const Activity = () => {
                         </a>
                       </div>
                       <div className="content">
-                        <a href="nft-details.html">
+                        <a href="nft-details">
                           <h6
                             className="title"
                             style={{ fontSize: "20px", color: "#ffffff" }}

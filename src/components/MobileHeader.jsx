@@ -564,7 +564,7 @@ const MobileHeader = () => {
                           </a>
                         </li>
                         <li>
-                          <a href="nft-details.html">
+                          <a href="nft-details">
                             Product Details{" "}
                             <svg
                               xmlns="http://www.w3.org/2000/svg"

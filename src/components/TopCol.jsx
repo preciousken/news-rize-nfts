@@ -5,7 +5,10 @@ const TopCollection = () => {
   return (
     <div
       className="rn-collection-area rn-section-gapTop rn-section-gapBottom"
-      style={{ background: "#13131d" }}
+      style={{ 
+        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+      }}
+
     >
       <div className="container">
         <div className="row mb--50 align-items-center">

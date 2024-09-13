@@ -4,7 +4,10 @@ const Hero = () => {
   return (
     <div
       className="slider-one rn-section-gapTop"
-      style={{ background: "#13131d" }}
+      style={{ 
+        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+      }}
+
     >
       <div className="container">
         <div className="row row-reverce-sm align-items-center">

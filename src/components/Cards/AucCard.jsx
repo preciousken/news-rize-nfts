@@ -6,10 +6,15 @@ import {
   isJsonObject,
   isVideo,
 } from "../../lib/utils";
+import {
+  config,
+  COREUM_PAYMENT_COINS,
+  NETWORK_ITEMS,
+  PLATFORM_NETWORKS,
+} from "../../config";
+import LazyLoadImage from "../lazyImage/LazyImage";
 
 const AucCard = ({ item, hasCountdown = false }) => {
-  console.log("......", item);
-
   const currentUsr = null; //get the current user here
   const [isLiked, setIsLiked] = useState(false);
   const [nftItem, setNftItem] = useState({});
@@ -20,7 +25,6 @@ const AucCard = ({ item, hasCountdown = false }) => {
   const [auctionEnded, setAuctionEnded] = useState(false);
   const [nftName, setNftName] = useState("No Name");
   const [imageUrl, setImageUrl] = useState("");
-  const [thumbnailURL, setThumbnailURL] = useState("");
   const curTime = useRef(0);
   const navigate = useNavigate();
   // const dispatch = useAppDispatch();
@@ -37,14 +41,11 @@ const AucCard = ({ item, hasCountdown = false }) => {
     ) {
       setNftName(nftItem?.name);
       setImageUrl(nftItem?.logoURL);
-      setThumbnailURL(nftItem?.thumbnailURL);
       return;
     }
     const response = await fetch(
       getLinkPathToJSON(nftItem?.metadataURI, nftItem?.name)
     );
-
-    // console.log("(&^^(::::::;;tresponse",response.data)
 
     if (response.data) {
       if (isJsonObject(response.data)) {
@@ -104,23 +105,11 @@ const AucCard = ({ item, hasCountdown = false }) => {
           }}
         >
           <a
-            href="nft-details.html"
+            href="nft-details"
             tabIndex="-1"
             style={{ display: "block", height: "100%", width: "100%" }}
           >
-            <img
-              src={nftItem?.thumbnailURL}
-              alt="NFT_portfolio"
-              style={{
-                height: "100%",
-                width: "100%",
-                objectFit: "cover", // Cover the entire container
-                position: "absolute", // Ensure it covers the container
-                top: 0,
-                left: 0,
-                objectPosition: "top", // Align the image to the top
-              }}
-            />
+            <LazyLoadImage src={config.ipfsGateway + nftItem?.logoURL} placeholder={nftItem?.thumbnailURL} />
           </a>
           {hasCountdown && (
             <div className="countdown" data-date="2024-10-08">
@@ -152,108 +141,49 @@ const AucCard = ({ item, hasCountdown = false }) => {
               tabIndex="-1"
             >
               <img
-                src="assets/images/client/client-2.png"
+                src={"assets/images/icons/core.png"}
                 alt="Nft_Profile"
                 style={{ borderRadius: "50%" }}
               />
             </a>
-            <a
-              href="author"
-              className="avatar"
-              data-tooltip="Sabbir"
-              tabIndex="-1"
-            >
-              <img
-                src="assets/images/client/client-1.png"
-                alt="Nft_Profile"
-                style={{ borderRadius: "50%" }}
-              />
-            </a>
-            <a
-              href="author"
-              className="avatar"
-              data-tooltip="Falak"
-              tabIndex="-1"
-            >
-              <img
-                src="assets/images/client/client-11.png"
-                alt="Nft_Profile"
-                style={{ borderRadius: "50%" }}
-              />
-            </a>
-            <a className="more-author-text" href="#" tabIndex="-1">
-              16+ Place Bit.
-            </a>
-          </div>
-          <div
-            className="share-btn share-btn-activation dropdown"
-            style={{ display: "inline-block" }}
-          >
-            <button
-              className="icon"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              tabIndex="-1"
-              style={{
-                border: "none",
-                background: "none",
-                cursor: "pointer",
-              }}
-            >
-              <svg
-                viewBox="0 0 14 4"
-                fill="none"
-                width="16"
-                height="16"
-                style={{ verticalAlign: "middle" }}
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </button>
-
-            <div className="share-btn-setting dropdown-menu dropdown-menu-end">
-              <button
-                type="button"
-                className="btn-setting-text share-text"
-                data-bs-toggle="modal"
-                data-bs-target="#shareModal"
-                tabIndex="-1"
-                style={{
-                  border: "none",
-                  background: "none",
-                  cursor: "pointer",
-                }}
-              >
-                Share
-              </button>
-              <button
-                type="button"
-                className="btn-setting-text report-text"
-                data-bs-toggle="modal"
-                data-bs-target="#reportModal"
-                tabIndex="-1"
-                style={{
-                  border: "none",
-                  background: "none",
-                  cursor: "pointer",
-                }}
-              >
-                Report
-              </button>
-            </div>
           </div>
         </div>
-        <a href="nft-details.html" tabIndex="-1">
-          <span className="product-name">Morgan11</span>
+        <a href="nft-details" tabIndex="-1">
+          <span className="product-name">
+            {nftName?.length > 10 ? nftName?.substring(0, 10) + "..." : nftName}
+          </span>
         </a>
         <span className="latest-bid">Highest bid 3/16</span>
         <div className="bid-react-area">
-          <div className="last-bid">0.265wETH</div>
+          <div className="last-bid">
+            {item?.isSale === 2 ? (
+              <div>
+                <span>
+                  {item.bids && item.bids.length > 0
+                    ? item.bids[item.bids.length - 1].price
+                      ? item.bids[item.bids.length - 1].price
+                      : 0
+                    : item?.price}
+                </span>
+                {item.networkSymbol === PLATFORM_NETWORKS.COREUM
+                  ? item.coreumPaymentUnit === COREUM_PAYMENT_COINS.RIZE
+                    ? " RIZE"
+                    : " CORE"
+                  : ""}
+              </div>
+            ) : item?.isSale === 1 ? (
+              <div>
+                <span className="last-bid">{item?.price || "0 "}</span>
+                {item.networkSymbol === PLATFORM_NETWORKS.COREUM
+                  ? item.coreumPaymentUnit === COREUM_PAYMENT_COINS.RIZE
+                    ? " RIZE"
+                    : " CORE"
+                  : ""}
+              </div>
+            ) : (
+              "Not listed"
+            )}
+          </div>
           <div className="react-area">
             <svg
               viewBox="0 0 17 16"

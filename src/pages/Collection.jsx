@@ -4,7 +4,10 @@ import ColCard from "../components/Cards/ColCard";
 
 const Collection = () => {
   return (
-    <div style={{ background: "#13131d" }}>
+    <div style={{ 
+        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+      }}
+>
       <SubNav title="Our Collections" />
       <div className="rn-collection-area rn-section-gapTop">
         <div className="container">

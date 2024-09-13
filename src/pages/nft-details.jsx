@@ -4,7 +4,9 @@ import AuctionCard from "../components/Cards/Auction";
 
 const ProductDetails = () => {
   return (
-    <div style={{ background: "#13131d" }}>
+    <div style={{ 
+        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+      }}>
       <SubNav title="Product Details" />
       <div className="nft-details-area rn-section-gapTop">
         <div className="container">
@@ -595,7 +597,7 @@ const ProductDetails = () => {
                     </div>
                   </div>
                   {/* ////////aucttion is active */}
-                  <AuctionCard/>
+                  <AuctionCard />
                   {/* ///////auction has ended */}
                 </div>
               </div>

@@ -34,7 +34,10 @@ const Steps = () => {
   return (
     <div
       className="rn-service-area rn-section-gapTop"
-      style={{ background: "#13131d" }}
+      style={{ 
+        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+      }}
+
     >
       <div className="container">
         <div className="row">

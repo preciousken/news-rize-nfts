@@ -4,7 +4,10 @@ import ExploreProduct from "../components/ExploreProduct";
 
 const Author = () => {
   return (
-    <div style={{ background: "#13131d" }}>
+    <div style={{ 
+        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+      }}
+>
       {/* /////////// */}
       <div className="rn-author-bg-area bg_image--9 bg_image ptb--150">
         <div className="container">

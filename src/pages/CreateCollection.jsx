@@ -3,7 +3,10 @@ import SubNav from "../components/SubNav";
 
 const CreateCollection = () => {
   return (
-    <div style={{ background: "#13131d" }}>
+    <div style={{ 
+        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+      }}
+>
       <SubNav title="Create Collection" />
       <div className="creat-collection-area pt--80">
         <div className="container">

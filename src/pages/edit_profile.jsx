@@ -3,7 +3,10 @@ import SubNav from "../components/SubNav";
 
 const EditProfile = () => {
   return (
-    <div style={{ background: "#13131d" }}>
+    <div style={{ 
+        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+      }}
+>
       <SubNav title="Edit Profile" />
       <div className="edit-profile-area rn-section-gapTop">
         <div className="container">

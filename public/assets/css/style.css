@@ -141,6 +141,7 @@ html {
   overflow: hidden;
   overflow-y: auto;
   scroll-behavior: auto !important;
+  background-image: url("https://rainbowit.net/html/nuron/assets/images/bg/noise.gif");
 }
 
 body {
@@ -153,15 +154,18 @@ body {
   font-weight: var(--p-regular);
   position: relative;
   background: var(--background-color-2);
+  background-image: url("https://rainbowit.net/html/nuron/assets/images/bg/noise.gif");
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   body {
     overflow: hidden;
+    background-image: url("https://rainbowit.net/html/nuron/assets/images/bg/noise.gif");
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   body {
     overflow: hidden;
+    background-image: url("https://rainbowit.net/html/nuron/assets/images/bg/noise.gif");
   }
 }
 @media only screen and (max-width: 767px) {

@@ -17,34 +17,42 @@ import ProductDetails from './pages/nft-details';
 import PageNotFound from "./pages/PageNotFound"
 import AuthRequired from './context/AuthRequired';
 import AuthProvider from './context/AuthContext';
+import { Provider } from 'react-redux';
+import { persistor, store } from './store';
+import { PersistGate } from 'redux-persist/integration/react';
 
 
 const App: React.FC = () => {
   return (
-    <AuthProvider>
-      <Router>
-        <div>
-          <Header />
-          <Routes>
-            {/* Use AuthRequired when needed */}
-            {/* <Route element={<AuthRequired />}> */}
-            <Route path="/" element={<Home />} />
-            {/* </Route> */}
-            <Route path="/createnft" element={<CreateNFT />} />
-            <Route path="/activity" element={<Activity />} />
-            <Route path="/create-collection" element={<CreateCollection />} />
-            <Route path="/author" element={<Author />} />
-            <Route path="/edit-profile" element={<EditProfile />} />
-            <Route path="/collection" element={<Collection />} />
-            <Route path="/nft-details" element={<ProductDetails />} />
-            
-            {/* 404 page */}
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-          <Footer />
-        </div>
-      </Router>
-    </AuthProvider>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+
+      <AuthProvider>
+        <Router>
+          <div>
+            <Header />
+            <Routes>
+              {/* Use AuthRequired when needed */}
+              {/* <Route element={<AuthRequired />}> */}
+              <Route path="/" element={<Home />} />
+              {/* </Route> */}
+              <Route path="/createnft" element={<CreateNFT />} />
+              <Route path="/activity" element={<Activity />} />
+              <Route path="/create-collection" element={<CreateCollection />} />
+              <Route path="/author" element={<Author />} />
+              <Route path="/edit-profile" element={<EditProfile />} />
+              <Route path="/collection" element={<Collection />} />
+              <Route path="/nft-details" element={<ProductDetails />} />
+
+              {/* 404 page */}
+              <Route path="*" element={<PageNotFound />} />
+            </Routes>
+            <Footer />
+          </div>
+        </Router>
+      </AuthProvider>
+      </PersistGate>
+    </Provider>
   );
 }
 

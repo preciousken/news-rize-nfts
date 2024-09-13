@@ -53,7 +53,7 @@ const Bidding = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ limit: 6 }),
+          body: JSON.stringify({ limit: 10 }),
         }
       );
 
@@ -74,7 +74,10 @@ const Bidding = () => {
   return (
     <div
       className="rn-live-bidding-area rn-section-gapTop"
-      style={{ background: "#13131d" }}
+      style={{ 
+        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+      }}
+
     >
       <div className="container">
         <div className="row mb--50">
