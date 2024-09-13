@@ -1,71 +1,116 @@
-import React from "react";
-import CardC from "./Cards/Card";
+import React, { useEffect, useState } from "react";
+import AucCard from "./Cards/AucCard";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { config } from "../config";
+// import axios from "axios";
 
 const NewestI = () => {
+  const sliderSettings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    centerMode: true,
+    centerPadding: "5%",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          centerPadding: "8%",
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          centerPadding: "5%",
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: "0",
+        },
+      },
+    ],
+  };
+
+  const [items, setItems] = useState([]);
+
+  const getPopularItems = async () => {
+    try {
+      const response = await fetch(
+        `${config.API_URL}api/item/getPopularItems`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ limit: 20 }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.code === 0) {
+        setItems(data.data || []);
+      }
+    } catch (error) {
+      console.log("getPopularItems() error ===> ", error);
+    }
+  };
+
+  useEffect(() => {
+    getPopularItems();
+  }, []);
+
   return (
     <div
-      className="rn-new-items rn-section-gapTop"
+      className="rn-live-bidding-area rn-section-gapTop"
       style={{ 
         backgroundColor: "rgba(19, 19, 29, 0.9)" 
       }}
 
     >
       <div className="container">
-        <div className="row mb--50 align-items-center">
-          <div className="col-lg-6 col-md-6 col-sm-6 col-12">
-            <h3
-              className="title mb--0 sal-animate"
-              data-sal-delay="150"
-              data-sal="slide-up"
-              data-sal-duration="800"
-              style={{
-                color: "#ffffff",
-                fontSize: "32px",
-                fontFamily: "Roboto",
-                fontWeight: "bolder",
-              }}
-            >
-              Newest Items
-            </h3>
-          </div>
-          <div className="col-lg-6 col-md-6 col-sm-6 col-12 mt_mobile--15">
-            <div
-              className="view-more-btn text-start text-sm-end sal-animate"
-              data-sal-delay="150"
-              data-sal="slide-up"
-              data-sal-duration="800"
-            >
-              <a
-                className="btn-transparent"
-                href="#"
-                style={{ color: "#acacac", textDecoration: "none" }}
+        <div className="row mb--50">
+          <div className="col-lg-12">
+            <div className="section-title">
+              <h3
+                className="title mb--0 live-bidding-title sal-animate"
+                data-sal-delay="150"
+                data-sal="slide-up"
+                data-sal-duration="800"
+                style={{
+                  color: "#ffffff",
+                  fontSize: "32px",
+                  fontFamily: "Roboto",
+                  fontWeight: "bolder",
+                }}
               >
-                VIEW ALL
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  className="feather feather-arrow-right"
-                >
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
+                Popular Nfts
+              </h3>
             </div>
           </div>
+          {/*  */}
         </div>
-        <div className="row g-5">
-         <CardC/>
-         <CardC/>
-         <CardC/>
-         <CardC/>
-         <CardC/>
+        <div className="row">
+          <div className="col-lg-12">
+            <div style={{ height: "400px", overflow: "visible" }}>
+              <Slider {...sliderSettings}>
+                {items.map((item) => {
+                  return <AucCard item={item} />;
+                })}
+              </Slider>
+            </div>
+          </div>
         </div>
       </div>
     </div>
