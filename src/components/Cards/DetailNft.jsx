@@ -8,7 +8,7 @@ import {
   changeItemDetail,
   selectDetailOfAnItem,
 } from "../../reducers/nft.reducers";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { isEmpty } from "../../lib/methods";
 import {
   selectCurrentNetworkSymbol,
@@ -55,7 +55,7 @@ import { useWalletOperations } from "../../hooks_/useWalletOperations";
 import { useAuth } from "../../context/AuthContext";
 import LazyLoadImage from "../lazyImage/LazyImage";
 
-const DetailNft = () => {
+const DetailNft = ({ tokenId }) => {
   const globalDetailNFT = useAppSelector(selectDetailOfAnItem);
   const currentUsr = useAppSelector(selectCurrentUser);
   const currentNetworkSymbol = useAppSelector(selectCurrentNetworkSymbol);
@@ -65,8 +65,6 @@ const DetailNft = () => {
   const [visibleModalSale, setVisibleModalSale] = useState(false);
   const [visibleModalCancelSale, setVisibleModalCancelSale] = useState(false);
   const [processing, setProcessing] = useState(false);
-  const [searchParams] = useSearchParams();
-  const tokenId = searchParams.get("tokenId");
   const [DEMO_NFT_ID] = useState(nanoid());
   const [sysTime, setSysTime] = useState(0);
   const [auctionEnded, setAuctionEnded] = useState(false);
@@ -354,6 +352,35 @@ const DetailNft = () => {
     };
   }, [processing]);
 
+  const applyChangeExplicitContents = async () => {
+    setShowNSFWModal(false);
+    if (isEmpty(currentUsr?._id)) {
+      toast.warn("Please connect your wallet and try again.");
+      return;
+    }
+    try {
+      //update explicit
+      const updateResponse = await axios.post(
+        `${config.API_URL}api/item/updateExplicit`,
+        {
+          userId: currentUsr?._id,
+          itemId: globalDetailNFT?._id,
+        }
+      );
+      if (updateResponse.data.code === 0) {
+        getNftDetail(globalDetailNFT?._id);
+      }
+    } catch (error) {}
+  };
+
+  const handleCheckFieldChange = (event) => {
+    if (event.target.checked === false) {
+      applyChangeExplicitContents();
+    } else {
+      setShowNSFWModal(true);
+    }
+  };
+
   return (
     <div
       className="custom-modal "
@@ -521,11 +548,13 @@ const DetailNft = () => {
                   <div>
                     <LazyLoadImage
                       src={
-                        "https://nftstorage.b-cdn.net/ipfs/bafybeigtqzrgti7x4rh2bp5fbat54zjmgtoseaiqg77y4teomt3minchnq/529.png"
+                        globalDetailNFT?.logoURL !== ""
+                          ? config.ipfsGateway + globalDetailNFT?.logoURL
+                          : config.ipfsGateway + nftMetaData?.previewImage
                       }
                       alt=""
                       placeholder={
-                        "https://nftstorage.b-cdn.net/ipfs/bafybeigtqzrgti7x4rh2bp5fbat54zjmgtoseaiqg77y4teomt3minchnq/529.png"
+                        globalDetailNFT?.thumbnailURL
                       }
                       cls="nft-detail__nft--image -img"
                     />
