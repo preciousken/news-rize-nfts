@@ -22,6 +22,8 @@ import { persistor, store } from './store';
 import { PersistGate } from 'redux-persist/integration/react';
 import { config } from './config';
 import { io } from "socket.io-client";
+import MyCollection from './pages/MyCollection';
+
 
 export const socket = io(`${config.socketUrl}`);
 
@@ -46,6 +48,7 @@ const App: React.FC = () => {
               <Route path="/author" element={<Author />} />
               <Route path="/edit-profile" element={<EditProfile />} />
               <Route path="/collection" element={<Collection />} />
+              <Route path="/my-collection" element={<MyCollection/>} />
               <Route path="/nft-details" element={<ProductDetails />} />
 
               {/* 404 page */}

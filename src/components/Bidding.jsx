@@ -23,14 +23,14 @@ const Bidding = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          centerPadding: "8%",
+          centerPadding: "12%",
         },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          centerPadding: "5%",
+          centerPadding: "8%",
         },
       },
       {
