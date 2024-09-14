@@ -570,6 +570,8 @@ const Collection = () => {
     setStartIndex(event.target.value);
   };
 
+  // console.log("...///collection",collection?.description)
+
   return (
     <div
       style={{
@@ -800,25 +802,8 @@ const Collection = () => {
                     className="profile-hero__content--description"
                     style={{ cursor: "pointer" }}
                   >
-                    <p className="mobile">
-                      Coreum Punks is a collection of 10,000 NFTs minted on the
-                      XRPL and Coreum Blockchains and created by...
-                    </p>
-                    <p className="sm">
-                      Coreum Punks is a collection of 10,000 NFTs minted on the
-                      XRPL and Coreum Blockchains and created by the teams
-                      behind NFT Evolutionz and Coreum Community Dao. Passionate
-                      about the Coreum Blockchain and eager to contribute to its
-                      growth, the Coreum Punks project was introduced with
-                      community at its heart and driven by the idea to reward
-                      holders in various ways. Its aim is to grow communities
-                      and provide a fun and engaging way for users from two
-                      blockchains to interact. Both teams believe in the
-                      importance of unity and growth cross-chain. Our focus will
-                      always be to promote, build and progress the Coreum space
-                      and our joint effort and passion for Coreum will ensure
-                      the project continues&nbsp;to&nbsp;thrive.
-                    </p>
+                    <p className="mobile">{collection?.description}</p>
+                    <p className="sm">{collection?.description}</p>
                     <span>See more</span>
                   </div>
                   <div className="profile-hero__content--collection-details-trade">
@@ -1050,14 +1035,14 @@ const Collection = () => {
       </div>
 
       {/* ////////0000000000 stop 00000000/ */}
-      <div class="mid-section-wrapper collection-owned-wrapper">
-        <div class="filter-content--wrapper  desktop"></div>
-        <div class="nft-wrapper ">
-          <div class="item-content-wrapper">
-            <div class="grid-container collection-page">
+      <div className="mid-section-wrapper collection-owned-wrapper">
+        <div className="filter-content--wrapper  desktop"></div>
+        <div className="nft-wrapper ">
+          <div className="item-content-wrapper">
+            <div className="grid-container collection-page">
               <div
                 data-virtuoso-scroller="true"
-                class="card-scroller fade-in"
+                className="card-scroller fade-in"
                 style={{ position: "relative", height: "4559.46px" }}
               >
                 <div
@@ -1070,7 +1055,7 @@ const Collection = () => {
                   }}
                 >
                   <div
-                    class="card-wrapper"
+                    className="card-wrapper"
                     data-testid="virtuoso-item-list"
                     style={{
                       paddingTop: "0px",

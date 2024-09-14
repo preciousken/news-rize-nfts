@@ -29,7 +29,7 @@ const ColCard = ({ collection = {} }) => {
     }
   };
 
-  // console.log("....data?.collection_info///",data?.collection_info)
+  // console.log("....data?.collection_info///",data._id)
 
   return (
     <div
@@ -37,7 +37,10 @@ const ColCard = ({ collection = {} }) => {
       style={{ width: "311.333px", marginRight: "16px" }}
     >
       <div className="collection-card">
-        <a className="collection-card__content" href="/launchpad/coreumpunks/">
+        <a
+          className="collection-card__content"
+          href={`/collection?colId=${data?._id}`}
+        >
           <div className="collection-card__content--nft">
             <img
               alt="menu"
@@ -58,7 +61,7 @@ const ColCard = ({ collection = {} }) => {
             <div className="title">{data?.collection_info?.name}</div>
             <div className="content ">
               <div className="item">
-                <div className="label">{(data)?.items_length} items</div>
+                <div className="label">{data?.items_length} items</div>
                 <div className="amount white">{""}</div>
               </div>
               {/* <div className="price">

@@ -117,12 +117,12 @@ const ColLC = ({ item, key, selectable }) => {
   console.log(config.ipfsGateway + nftItem?.logoURL)
 
   return (
-    <div class="virtuoso-grid-item" data-index="1">
-      <div class="instant-sell-card-wrapper">
-        <div class="profile-card  buyNow-card">
-          <div class="profile-card__action-wrapper">
-            <div class="profile-card__action">
-              <button type="button" class="button button--blank  ">
+    <div className="virtuoso-grid-item" data-index="1">
+      <div className="instant-sell-card-wrapper">
+        <div className="profile-card  buyNow-card">
+          <div className="profile-card__action-wrapper">
+            <div className="profile-card__action">
+              <button type="button" className="button button--blank  ">
                 <img
                   alt="menu"
                   width="0"
@@ -135,17 +135,18 @@ const ColLC = ({ item, key, selectable }) => {
               </button>
             </div>
           </div>
-          <div class="profile-card__top">
+          <div className="profile-card__top">
             <LazyLoadImage src={config.ipfsGateway + nftItem?.logoURL} placeholder={nftItem?.thumbnailURL} />
+            {/* <img src={config.ipfsGateway + nftItem?.logoURL} alt="" /> */}
           </div>
-          <div class="profile-card__bottom-wrapper buyNow">
-            <div class="profile-card__buy-now">
-              <div class="profile-card__bottom-wrapper--title">
-                <div class="profile-card__bottom-wrapper--hash-id">
+          <div className="profile-card__bottom-wrapper buyNow">
+            <div className="profile-card__buy-now">
+              <div className="profile-card__bottom-wrapper--title">
+                <div className="profile-card__bottom-wrapper--hash-id">
                 {nftName?.length > 10 ? nftName?.substring(0, 10) + "..." : nftName}
                 </div>
-                <div class="Tooltip_tooltipContainer__cjikM Tooltip_left__2dC0Y">
-                  <div class="nft-detail__top--status grey">
+                <div className="Tooltip_tooltipContainer__cjikM Tooltip_left__2dC0Y">
+                  <div className="nft-detail__top--status grey">
                     <img
                       alt="Hexagon"
                       width="24"
@@ -157,12 +158,12 @@ const ColLC = ({ item, key, selectable }) => {
                     />
                     <span>6436</span>
                   </div>
-                  <div class="Tooltip_tooltipContent__7RzH9 ">
+                  <div className="Tooltip_tooltipContent__7RzH9 ">
                     In the top 100%
                   </div>
                 </div>
               </div>
-              <div class="profile-card__buy-now--amount">
+              <div className="profile-card__buy-now--amount">
                 <img
                   alt="menu"
                   width="0"
@@ -201,14 +202,14 @@ const ColLC = ({ item, key, selectable }) => {
             )}
               </div>
             </div>
-            <div class="profile-card__buy-now--action buy-now">
-              <button type="button" class="button button--blank  ">
+            <div className="profile-card__buy-now--action buy-now">
+              <button type="button" className="button button--blank  ">
                 BUY NOW
               </button>
             </div>
-            <div class="profile-card__footer last-sale">
-              <div class="label">{''}</div>
-              <div class="amount">{''} </div>
+            <div className="profile-card__footer last-sale">
+              <div className="label">{''}</div>
+              <div className="amount">{''} </div>
             </div>
           </div>
         </div>

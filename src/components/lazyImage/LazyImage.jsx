@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 
-function LazyLoadImage({ src, alt = "Nft_Profile", placeholder }) {
+function LazyLoadImage({ src, alt = "Nft_Profile", placeholder, cls="img" }) {
   const [isVisible, setIsVisible] = useState(false);
   const imgRef = useRef(null);
 
@@ -26,9 +26,9 @@ function LazyLoadImage({ src, alt = "Nft_Profile", placeholder }) {
   return (
     <div ref={imgRef}>
       {isVisible ? (
-        <img src={src} alt={alt} />
+        <img src={src} alt={alt} className={cls} />
       ) : (
-        <img src={placeholder} alt="placeholder" />
+        <img src={placeholder} alt="placeholder" className={cls}  />
       )}
     </div>
   );

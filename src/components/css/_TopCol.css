@@ -26642,12 +26642,13 @@ input[type="number"] {
   }
 }
 
-.profile-card__top > img {
+.profile-card__top .img {
   width: 100%;
-  /* height: 100%; */
-  object-fit: contain;
+  height: 100%;
+  /* object-fit: contain; */
   position: absolute;
   z-index: 2;
+  object-fit: cover;
 }
 
 .profile-card__top.loader-img {

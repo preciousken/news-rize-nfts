@@ -20,6 +20,10 @@ import AuthProvider from './context/AuthContext';
 import { Provider } from 'react-redux';
 import { persistor, store } from './store';
 import { PersistGate } from 'redux-persist/integration/react';
+import { config } from './config';
+import { io } from "socket.io-client";
+
+export const socket = io(`${config.socketUrl}`);
 
 
 const App: React.FC = () => {
