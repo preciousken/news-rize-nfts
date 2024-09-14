@@ -8,7 +8,7 @@ import {
   changeItemDetail,
   selectDetailOfAnItem,
 } from "../../reducers/nft.reducers";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { isEmpty } from "../../lib/methods";
 import {
   selectCurrentNetworkSymbol,
@@ -65,7 +65,8 @@ const DetailNft = () => {
   const [visibleModalSale, setVisibleModalSale] = useState(false);
   const [visibleModalCancelSale, setVisibleModalCancelSale] = useState(false);
   const [processing, setProcessing] = useState(false);
-  const { tokenId } = useParams();
+  const [searchParams] = useSearchParams();
+  const tokenId = searchParams.get("tokenId");
   const [DEMO_NFT_ID] = useState(nanoid());
   const [sysTime, setSysTime] = useState(0);
   const [auctionEnded, setAuctionEnded] = useState(false);
@@ -518,7 +519,16 @@ const DetailNft = () => {
                     </svg>
                   </div>
                   <div>
-                    <LazyLoadImage src={"https://nftstorage.b-cdn.net/ipfs/bafybeigtqzrgti7x4rh2bp5fbat54zjmgtoseaiqg77y4teomt3minchnq/529.png"} alt="" placeholder={"https://nftstorage.b-cdn.net/ipfs/bafybeigtqzrgti7x4rh2bp5fbat54zjmgtoseaiqg77y4teomt3minchnq/529.png"} cls="nft-detail__nft--image -img"/>
+                    <LazyLoadImage
+                      src={
+                        "https://nftstorage.b-cdn.net/ipfs/bafybeigtqzrgti7x4rh2bp5fbat54zjmgtoseaiqg77y4teomt3minchnq/529.png"
+                      }
+                      alt=""
+                      placeholder={
+                        "https://nftstorage.b-cdn.net/ipfs/bafybeigtqzrgti7x4rh2bp5fbat54zjmgtoseaiqg77y4teomt3minchnq/529.png"
+                      }
+                      cls="nft-detail__nft--image -img"
+                    />
                   </div>
                   <button
                     type="button"
