@@ -84,6 +84,7 @@ const AucCard = ({ item, hasCountdown = false }) => {
     // }
   }, []);
 
+
   return (
     <div
       className="single-slide-product slick-slide"
@@ -99,9 +100,9 @@ const AucCard = ({ item, hasCountdown = false }) => {
         <div
           className="card-thumbnail"
           style={{
-            height: "200px", // Fixed height for thumbnail
+            height: "200px",
             overflow: "hidden",
-            position: "relative", // Required for absolutely positioning child
+            position: "relative",
           }}
         >
           <a
