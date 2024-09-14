@@ -572,6 +572,20 @@ const Collection = () => {
 
   // console.log("...///collection",collection?.description)
 
+  const DescriptionRenderer = ({ description, cls }) => {
+    const isHTML = (str) => /<\/?[a-z][\s\S]*>/i.test(str);
+
+    return (
+      <p className={cls}>
+        {isHTML(description) ? (
+          <span dangerouslySetInnerHTML={{ __html: description }} />
+        ) : (
+          description
+        )}
+      </p>
+    );
+  };
+
   return (
     <div
       style={{
@@ -802,8 +816,14 @@ const Collection = () => {
                     className="profile-hero__content--description"
                     style={{ cursor: "pointer" }}
                   >
-                    <p className="mobile">{collection?.description}</p>
-                    <p className="sm">{collection?.description}</p>
+                    <DescriptionRenderer
+                      cls={"mobile"}
+                      description={collection?.description}
+                    />
+                    <DescriptionRenderer
+                      cls="sm"
+                      description={collection?.description}
+                    />
                     <span>See more</span>
                   </div>
                   <div className="profile-hero__content--collection-details-trade">

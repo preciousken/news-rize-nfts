@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { config } from "../config";
+import ColLC from "./Cards/ColLC";
 // import axios from "axios";
 
 const NewestI = () => {
@@ -16,7 +17,7 @@ const NewestI = () => {
     autoplay: true,
     autoplaySpeed: 1000,
     centerMode: true,
-    centerPadding: "5%",
+    centerPadding: "10%",
     responsive: [
       {
         breakpoint: 1024,
@@ -75,7 +76,7 @@ const NewestI = () => {
     <div
       className="rn-live-bidding-area rn-section-gapTop"
       style={{ 
-        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+        backgroundColor: "rgba(19, 19, 29, 0.97)" 
       }}
 
     >
@@ -106,7 +107,8 @@ const NewestI = () => {
             <div style={{ height: "400px", overflow: "visible" }}>
               <Slider {...sliderSettings}>
                 {items.map((item) => {
-                  return <AucCard item={item} />;
+                  // return <AucCard item={item} />;
+                  return <ColLC item={item} />;
                 })}
               </Slider>
             </div>

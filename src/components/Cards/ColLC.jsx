@@ -15,7 +15,12 @@ import { useAppDispatch, useAppSelector } from "../../hooks";
 import { isEmpty } from "../../lib/methods";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { config, PLATFORM_NETWORKS, FILE_TYPE, COREUM_PAYMENT_COINS } from "../../config.js";
+import {
+  config,
+  PLATFORM_NETWORKS,
+  FILE_TYPE,
+  COREUM_PAYMENT_COINS,
+} from "../../config.js";
 // import { NFT_EFFECT } from "../StyleComponent/EffectListBox";
 // import TileEffect from "../StyleComponent/TileEffect";
 import {
@@ -114,15 +119,13 @@ const ColLC = ({ item, key, selectable }) => {
     // }
   }, []);
 
-  console.log(config.ipfsGateway + nftItem?.logoURL)
-
   return (
     <div className="virtuoso-grid-item" data-index="1">
       <div className="instant-sell-card-wrapper">
         <div className="profile-card  buyNow-card">
           <div className="profile-card__action-wrapper">
             <div className="profile-card__action">
-              <button type="button" className="button button--blank  ">
+              <button type="button" className="button button--blank  " onClick={()=>navigate(`/nft-details?tokenId=${nftItem?._id}`)}>
                 <img
                   alt="menu"
                   width="0"
@@ -136,14 +139,19 @@ const ColLC = ({ item, key, selectable }) => {
             </div>
           </div>
           <div className="profile-card__top">
-            <LazyLoadImage src={config.ipfsGateway + nftItem?.logoURL} placeholder={nftItem?.thumbnailURL} />
+              <LazyLoadImage
+                src={config.ipfsGateway + nftItem?.logoURL}
+                placeholder={nftItem?.thumbnailURL}
+              />
             {/* <img src={config.ipfsGateway + nftItem?.logoURL} alt="" /> */}
           </div>
           <div className="profile-card__bottom-wrapper buyNow">
             <div className="profile-card__buy-now">
               <div className="profile-card__bottom-wrapper--title">
                 <div className="profile-card__bottom-wrapper--hash-id">
-                {nftName?.length > 10 ? nftName?.substring(0, 10) + "..." : nftName}
+                  {nftName?.length > 10
+                    ? nftName?.substring(0, 10) + "..."
+                    : nftName}
                 </div>
                 <div className="Tooltip_tooltipContainer__cjikM Tooltip_left__2dC0Y">
                   <div className="nft-detail__top--status grey">
@@ -174,32 +182,32 @@ const ColLC = ({ item, key, selectable }) => {
                   style={{ color: "transparent" }}
                 />
                 {item?.isSale === 2 ? (
-              <div>
-                <span>
-                  {item.bids && item.bids.length > 0
-                    ? item.bids[item.bids.length - 1].price
-                      ? item.bids[item.bids.length - 1].price
-                      : 0
-                    : item?.price}
-                </span>
-                {item.networkSymbol === PLATFORM_NETWORKS.COREUM
-                  ? item.coreumPaymentUnit === COREUM_PAYMENT_COINS.RIZE
-                    ? " RIZE"
-                    : " CORE"
-                  : ""}
-              </div>
-            ) : item?.isSale === 1 ? (
-              <div>
-                <span className="last-bid">{item?.price || "0 "}</span>
-                {item.networkSymbol === PLATFORM_NETWORKS.COREUM
-                  ? item.coreumPaymentUnit === COREUM_PAYMENT_COINS.RIZE
-                    ? " RIZE"
-                    : " CORE"
-                  : ""}
-              </div>
-            ) : (
-              "Not listed"
-            )}
+                  <div>
+                    <span>
+                      {item.bids && item.bids.length > 0
+                        ? item.bids[item.bids.length - 1].price
+                          ? item.bids[item.bids.length - 1].price
+                          : 0
+                        : item?.price}
+                    </span>
+                    {item.networkSymbol === PLATFORM_NETWORKS.COREUM
+                      ? item.coreumPaymentUnit === COREUM_PAYMENT_COINS.RIZE
+                        ? " RIZE"
+                        : " CORE"
+                      : ""}
+                  </div>
+                ) : item?.isSale === 1 ? (
+                  <div>
+                    <span className="last-bid">{item?.price || "0 "}</span>
+                    {item.networkSymbol === PLATFORM_NETWORKS.COREUM
+                      ? item.coreumPaymentUnit === COREUM_PAYMENT_COINS.RIZE
+                        ? " RIZE"
+                        : " CORE"
+                      : ""}
+                  </div>
+                ) : (
+                  "Not listed"
+                )}
               </div>
             </div>
             <div className="profile-card__buy-now--action buy-now">
@@ -208,8 +216,8 @@ const ColLC = ({ item, key, selectable }) => {
               </button>
             </div>
             <div className="profile-card__footer last-sale">
-              <div className="label">{''}</div>
-              <div className="amount">{''} </div>
+              <div className="label">{""}</div>
+              <div className="amount">{""} </div>
             </div>
           </div>
         </div>

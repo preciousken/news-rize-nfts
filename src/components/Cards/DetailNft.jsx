@@ -54,6 +54,10 @@ import { useItemsApiServices } from "../../api/useItemsApiServices";
 import { useWalletOperations } from "../../hooks_/useWalletOperations";
 import { useAuth } from "../../context/AuthContext";
 import LazyLoadImage from "../lazyImage/LazyImage";
+import PricesUnit from "../Badges/PricesUnit";
+import DescPad from "../Badges/DescPad";
+import BidPad from "../Badges/BidPad";
+import PropPad from "../Badges/PropPad";
 
 const DetailNft = ({ tokenId }) => {
   const globalDetailNFT = useAppSelector(selectDetailOfAnItem);
@@ -380,7 +384,7 @@ const DetailNft = ({ tokenId }) => {
       setShowNSFWModal(true);
     }
   };
-
+  // console.log("7787777777785566", nftMetaData);
   return (
     <div
       className="custom-modal "
@@ -399,87 +403,14 @@ const DetailNft = ({ tokenId }) => {
             </div>
             <div className="nft-detail__top">
               <div className="nft-detail__top--left">
-                <span className="nft-detail__top--id"> Coreum Punks #3605</span>
-                {/* <a
-                  className="nft-detail__top--title"
-                  target="_blank"
-                  href="/collection/coreum-punks/"
+                <span
+                  className="nft-detail__top--id"
+                  data-tooltip-content={nftName}
                 >
-                  Coreum Punks
-                  <img
-                    alt=""
-                    width="0"
-                    height="0"
-                    decoding="async"
-                    data-nimg="1"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE4N18yNzg4KSI+CjxwYXRoIGQ9Ik0xMiAwSDJDMC44OTU0MyAwIDAgMC44OTU0MyAwIDJWMTJDMCAxMy4xMDQ2IDAuODk1NDMgMTQgMiAxNEgxMkMxMy4xMDQ2IDE0IDE0IDEzLjEwNDYgMTQgMTJWMkMxNCAwLjg5NTQzIDEzLjEwNDYgMCAxMiAwWiIgZmlsbD0iI0NGQTI0QSIvPgo8cGF0aCBkPSJNNCA3TDYgOUwxMCA1IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8xODdfMjc4OCI+CjxyZWN0IHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K"
-                    styie={{ color: "transparent" }}
-                  />
-                </a> */}
-                {/* <div className="Tooltip_tooltipContainer__cjikM Tooltip_left__2dC0Y">
-                  <div className="nft-detail__top--status grey">
-                    <img
-                      alt="Hexagon"
-                      width="24"
-                      height="24"
-                      decoding="async"
-                      data-nimg="1"
-                      src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMCAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuNDcgMy4yMDYyNUw0LjQ3IDEuMzMxMjVDNC43OTQyNyAxLjEyODU4IDUuMjA1NzMgMS4xMjg1OCA1LjUzIDEuMzMxMjVMOC41MyAzLjIwNjI1QzguODIyMzggMy4zODg5OSA5IDMuNzA5NDYgOSA0LjA1NDI1VjcuOTQ1NzVDOSA4LjI5MDU0IDguODIyMzggOC42MTEwMSA4LjUzIDguNzkzNzVMNS41MyAxMC42Njg4QzUuMjA1NzMgMTAuODcxNCA0Ljc5NDI3IDEwLjg3MTQgNC40NyAxMC42Njg4TDEuNDcgOC43OTM3NUMxLjE3NzYyIDguNjExMDEgMSA4LjI5MDU0IDEgNy45NDU3NVY0LjA1NDI1QzEgMy43MDk0NiAxLjE3NzYyIDMuMzg4OTkgMS40NyAzLjIwNjI1WiIgZmlsbD0id2hpdGUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K"
-                      styie={{ color: "transparent" }}
-                    />
-                    <span>7205</span>
-                  </div>
-                  <div className="Tooltip_tooltipContent__7RzH9 ">
-                    In the top 100%
-                  </div>
-                </div> */}
+                  {" "}
+                  {nftName}
+                </span>
               </div>
-              {/* <div className="nft-detail__top--right">
-                <div className="nft-detail__top--arrow">
-                  <button
-                    type="button"
-                    className="button button--blank nft-detail__top--left arrow "
-                  >
-                    <img
-                      alt=""
-                      width="0"
-                      height="0"
-                      decoding="async"
-                      data-nimg="1"
-                      src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAxMiAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDJMMiAxMEwxMCAxOCIgc3Ryb2tlPSIjMDBGRkYwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg=="
-                      styie={{ color: "transparent" }}
-                    />
-                  </button>
-                  <button
-                    type="button"
-                    className="button button--blank nft-detail__top--right arrow "
-                  >
-                    <img
-                      alt=""
-                      width="0"
-                      height="0"
-                      decoding="async"
-                      data-nimg="1"
-                      src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAxMiAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIgMkwxMCAxMEwyIDE4IiBzdHJva2U9IiMwMEZGRjAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K"
-                      styie={{ color: "transparent" }}
-                    />
-                  </button>
-                </div>
-                <button
-                  type="button"
-                  className="button button--blank nft-detail__top--close "
-                >
-                  <img
-                    alt=""
-                    width="0"
-                    height="0"
-                    decoding="async"
-                    data-nimg="1"
-                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDEwIDEwIiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNMSAxTDkgOU05IDFMMSA5IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4="
-                    styie={{ color: "transparent" }}
-                  />
-                </button>
-              </div> */}
             </div>
             <a
               className="nft-detail__title"
@@ -553,9 +484,7 @@ const DetailNft = ({ tokenId }) => {
                           : config.ipfsGateway + nftMetaData?.previewImage
                       }
                       alt=""
-                      placeholder={
-                        globalDetailNFT?.thumbnailURL
-                      }
+                      placeholder={globalDetailNFT?.thumbnailURL}
                       cls="nft-detail__nft--image -img"
                     />
                   </div>
@@ -588,111 +517,7 @@ const DetailNft = ({ tokenId }) => {
                     />
                   </button>
                 </div>
-                <div className="nft-detail__activities widget desktop">
-                  <div className="nft-detail__activities--title">Activity</div>
-                  <div className="nft-detail__activities--content">
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>Action</th>
-                          <th>Price</th>
-                          <th>From</th>
-                          <th>To</th>
-                          <th>Time</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td className="type-activity">
-                            <img
-                              alt=""
-                              width="0"
-                              height="0"
-                              decoding="async"
-                              data-nimg="1"
-                              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDIxSDVDMi43OTA4NiAyMSAxIDE5LjIwOTEgMSAxN1YxTDQuNzUgMy41TDguNSAxTDEyLjI1IDMuNUwxNiAxVjExTTE2IDIxVjExTTE2IDIxSDE3QzE5LjIwOTEgMjEgMjEgMTkuMjA5MSAyMSAxN1YxMUgxNk02IDcuMjVIMTFNNiAxMi4yNUgxMU02IDE3LjI1SDExIiBzdHJva2U9IiMwMEZGRjAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K"
-                              styie={{ color: "transparent" }}
-                            />
-                            Update Listing
-                          </td>
-                          <td className="price">
-                            <img
-                              alt=""
-                              width="0"
-                              height="0"
-                              decoding="async"
-                              data-nimg="1"
-                              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE4N18yODM5KSI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMV8xODdfMjgzOSkiPgo8cGF0aCBkPSJNNiAwQzIuNjY2NjcgMCAwIDIuNjY2NjcgMCA2QzAgOS4zMzMzMyAyLjY2NjY3IDEyIDYgMTJDOS4zMzMzMyAxMiAxMiA5LjMzMzMzIDEyIDZDMTIgMi42NjY2NyA5LjMzMzMzIDAgNiAwWk04LjMzMzMzIDEwLjUzMzNDNy40NjY2NyAxMSA2LjYgMTEuMTMzMyA1LjY2NjY3IDExLjA2NjdDNC40NjY2NyAxMSAzLjQgMTAuNTMzMyAyLjQ2NjY3IDkuNzMzMzNDMi4zMzMzMyA5LjYgMi4zMzMzMyA5LjYgMi40NjY2NyA5LjQ2NjY3QzMgOC45MzMzMyAzLjUzMzMzIDguNDY2NjcgNCA3LjkzMzMzQzQuMDY2NjcgNy44NjY2NyA0LjEzMzMzIDcuODY2NjcgNC4yNjY2NyA3LjkzMzMzQzUuNTMzMzMgOS4wNjY2NyA3LjUzMzMzIDguNjY2NjcgOC4yNjY2NyA3LjJDOS4wNjY2NyA1LjYgOCAzLjczMzMzIDYuMjY2NjcgMy41MzMzM0M1LjUzMzMzIDMuNDY2NjcgNC44NjY2NyAzLjY2NjY3IDQuMjY2NjcgNC4xMzMzM0M0LjEzMzMzIDQuMiA0LjA2NjY3IDQuMiA0IDQuMTMzMzNDMy40NjY2NyAzLjYgMi45MzMzMyAzLjA2NjY3IDIuNCAyLjUzMzMzQzIuMzMzMzMgMi40NjY2NyAyLjMzMzMzIDIuNCAyLjQgMi4zMzMzM0MyLjkzMzMzIDEuODY2NjcgMy41MzMzMyAxLjQ2NjY3IDQuMiAxLjI2NjY3QzQuNzMzMzMgMSA1LjMzMzMzIDAuOTMzMzMzIDUuOTMzMzMgMC45MzMzMzNDNy45MzMzMyAxIDkuNDY2NjcgMS44NjY2NyAxMC40NjY3IDMuNkMxMC45MzMzIDQuNDY2NjcgMTEuMTMzMyA1LjMzMzMzIDExLjA2NjcgNi4zMzMzM0MxMC45MzMzIDguMiAxMCA5LjYgOC4zMzMzMyAxMC41MzMzWk00LjYgNkM0LjYgNS4yIDUuMiA0LjYgNiA0LjZDNi44IDQuNiA3LjQgNS4yIDcuNCA2QzcuNCA2LjggNi44IDcuNCA2IDcuNEM1LjIgNy40IDQuNiA2LjggNC42IDZaIiBmaWxsPSIjMDBGRkYwIi8+CjwvZz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8xODdfMjgzOSI+CjxyZWN0IHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPGNsaXBQYXRoIGlkPSJjbGlwMV8xODdfMjgzOSI+CjxyZWN0IHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K"
-                              styie={{ color: "transparent" }}
-                            />
-                            180
-                          </td>
-                          <td>elpe...ore</td>
-                          <td>-</td>
-                          <td>1 day ago</td>
-                        </tr>
-                        <tr>
-                          <td className="type-activity">
-                            <img
-                              alt=""
-                              width="0"
-                              height="0"
-                              decoding="async"
-                              data-nimg="1"
-                              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDIxSDVDMi43OTA4NiAyMSAxIDE5LjIwOTEgMSAxN1YxTDQuNzUgMy41TDguNSAxTDEyLjI1IDMuNUwxNiAxVjExTTE2IDIxVjExTTE2IDIxSDE3QzE5LjIwOTEgMjEgMjEgMTkuMjA5MSAyMSAxN1YxMUgxNk02IDcuMjVIMTFNNiAxMi4yNUgxMU02IDE3LjI1SDExIiBzdHJva2U9IiMwMEZGRjAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K"
-                              styie={{ color: "transparent" }}
-                            />
-                            List
-                          </td>
-                          <td className="price">
-                            <img
-                              alt=""
-                              width="0"
-                              height="0"
-                              decoding="async"
-                              data-nimg="1"
-                              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE4N18yODM5KSI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMV8xODdfMjgzOSkiPgo8cGF0aCBkPSJNNiAwQzIuNjY2NjcgMCAwIDIuNjY2NjcgMCA2QzAgOS4zMzMzMyAyLjY2NjY3IDEyIDYgMTJDOS4zMzMzMyAxMiAxMiA5LjMzMzMzIDEyIDZDMTIgMi42NjY2NyA5LjMzMzMzIDAgNiAwWk04LjMzMzMzIDEwLjUzMzNDNy40NjY2NyAxMSA2LjYgMTEuMTMzMyA1LjY2NjY3IDExLjA2NjdDNC40NjY2NyAxMSAzLjQgMTAuNTMzMyAyLjQ2NjY3IDkuNzMzMzNDMi4zMzMzMyA5LjYgMi4zMzMzMyA5LjYgMi40NjY2NyA5LjQ2NjY3QzMgOC45MzMzMyAzLjUzMzMzIDguNDY2NjcgNCA3LjkzMzMzQzQuMDY2NjcgNy44NjY2NyA0LjEzMzMzIDcuODY2NjcgNC4yNjY2NyA3LjkzMzMzQzUuNTMzMzMgOS4wNjY2NyA3LjUzMzMzIDguNjY2NjcgOC4yNjY2NyA3LjJDOS4wNjY2NyA1LjYgOCAzLjczMzMzIDYuMjY2NjcgMy41MzMzM0M1LjUzMzMzIDMuNDY2NjcgNC44NjY2NyAzLjY2NjY3IDQuMjY2NjcgNC4xMzMzM0M0LjEzMzMzIDQuMiA0LjA2NjY3IDQuMiA0IDQuMTMzMzNDMy40NjY2NyAzLjYgMi45MzMzMyAzLjA2NjY3IDIuNCAyLjUzMzMzQzIuMzMzMzMgMi40NjY2NyAyLjMzMzMzIDIuNCAyLjQgMi4zMzMzM0MyLjkzMzMzIDEuODY2NjcgMy41MzMzMyAxLjQ2NjY3IDQuMiAxLjI2NjY3QzQuNzMzMzMgMSA1LjMzMzMzIDAuOTMzMzMzIDUuOTMzMzMgMC45MzMzMzNDNy45MzMzMyAxIDkuNDY2NjcgMS44NjY2NyAxMC40NjY3IDMuNkMxMC45MzMzIDQuNDY2NjcgMTEuMTMzMyA1LjMzMzMzIDExLjA2NjcgNi4zMzMzM0MxMC45MzMzIDguMiAxMCA5LjYgOC4zMzMzMyAxMC41MzMzWk00LjYgNkM0LjYgNS4yIDUuMiA0LjYgNiA0LjZDNi44IDQuNiA3LjQgNS4yIDcuNCA2QzcuNCA2LjggNi44IDcuNCA2IDcuNEM1LjIgNy40IDQuNiA2LjggNC42IDZaIiBmaWxsPSIjMDBGRkYwIi8+CjwvZz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8xODdfMjgzOSI+CjxyZWN0IHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPGNsaXBQYXRoIGlkPSJjbGlwMV8xODdfMjgzOSI+CjxyZWN0IHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K"
-                              styie={{ color: "transparent" }}
-                            />
-                            250
-                          </td>
-                          <td>elpe...ore</td>
-                          <td>-</td>
-                          <td>2 days ago</td>
-                        </tr>
-                        <tr>
-                          <td className="type-activity">
-                            <img
-                              alt=""
-                              width="0"
-                              height="0"
-                              decoding="async"
-                              data-nimg="1"
-                              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyMCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuNSA1Ljc4NTcySDE0LjUiIHN0cm9rZT0iIzAwRkZGMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxwYXRoIGQ9Ik0xLjQgNy42MDQ3N0w4LjExNDI5IDE2LjU1NzFDOC40OTE5OSAxNy4wNjA4IDkuMDg0NzcgMTcuMzU3MSA5LjcxNDI5IDE3LjM1NzFIMTAuMjg1N0MxMC45MTUyIDE3LjM1NzEgMTEuNTA4IDE3LjA2MDggMTEuODg1NyAxNi41NTcxTDE4LjYgNy42MDQ3NkMxOC44NTk2IDcuMjU4NTcgMTkgNi44Mzc1MSAxOSA2LjQwNDc3VjQuNjg1NTdDMTkgNC4xNTUxNCAxOC43ODkzIDMuNjQ2NDMgMTguNDE0MiAzLjI3MTM2TDE2LjM3MTUgMS4yMjg2NUMxNS45OTY0IDAuODUzNTc0IDE1LjQ4NzcgMC42NDI4NiAxNC45NTczIDAuNjQyODZINS4wNDI3MUM0LjUxMjI4IDAuNjQyODYgNC4wMDM1NyAwLjg1MzU3NCAzLjYyODUgMS4yMjg2NUwxLjU4NTc5IDMuMjcxMzZDMS4yMTA3MSAzLjY0NjQzIDEgNC4xNTUxNCAxIDQuNjg1NTdWNi40MDQ3N0MxIDYuODM3NTEgMS4xNDAzNiA3LjI1ODU3IDEuNCA3LjYwNDc3WiIgc3Ryb2tlPSIjMDBGRkYwIi8+Cjwvc3ZnPgo="
-                              styie={{ color: "transparent" }}
-                            />
-                            Mint
-                          </td>
-                          <td className="price">
-                            <img
-                              alt=""
-                              width="0"
-                              height="0"
-                              decoding="async"
-                              data-nimg="1"
-                              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE4N18yODM5KSI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMV8xODdfMjgzOSkiPgo8cGF0aCBkPSJNNiAwQzIuNjY2NjcgMCAwIDIuNjY2NjcgMCA2QzAgOS4zMzMzMyAyLjY2NjY3IDEyIDYgMTJDOS4zMzMzMyAxMiAxMiA5LjMzMzMzIDEyIDZDMTIgMi42NjY2NyA5LjMzMzMzIDAgNiAwWk04LjMzMzMzIDEwLjUzMzNDNy40NjY2NyAxMSA2LjYgMTEuMTMzMyA1LjY2NjY3IDExLjA2NjdDNC40NjY2NyAxMSAzLjQgMTAuNTMzMyAyLjQ2NjY3IDkuNzMzMzNDMi4zMzMzMyA5LjYgMi4zMzMzMyA5LjYgMi40NjY2NyA5LjQ2NjY3QzMgOC45MzMzMyAzLjUzMzMzIDguNDY2NjcgNCA3LjkzMzMzQzQuMDY2NjcgNy44NjY2NyA0LjEzMzMzIDcuODY2NjcgNC4yNjY2NyA3LjkzMzMzQzUuNTMzMzMgOS4wNjY2NyA3LjUzMzMzIDguNjY2NjcgOC4yNjY2NyA3LjJDOS4wNjY2NyA1LjYgOCAzLjczMzMzIDYuMjY2NjcgMy41MzMzM0M1LjUzMzMzIDMuNDY2NjcgNC44NjY2NyAzLjY2NjY3IDQuMjY2NjcgNC4xMzMzM0M0LjEzMzMzIDQuMiA0LjA2NjY3IDQuMiA0IDQuMTMzMzNDMy40NjY2NyAzLjYgMi45MzMzMyAzLjA2NjY3IDIuNCAyLjUzMzMzQzIuMzMzMzMgMi40NjY2NyAyLjMzMzMzIDIuNCAyLjQgMi4zMzMzM0MyLjkzMzMzIDEuODY2NjcgMy41MzMzMyAxLjQ2NjY3IDQuMiAxLjI2NjY3QzQuNzMzMzMgMSA1LjMzMzMzIDAuOTMzMzMzIDUuOTMzMzMgMC45MzMzMzNDNy45MzMzMyAxIDkuNDY2NjcgMS44NjY2NyAxMC40NjY3IDMuNkMxMC45MzMzIDQuNDY2NjcgMTEuMTMzMyA1LjMzMzMzIDExLjA2NjcgNi4zMzMzM0MxMC45MzMzIDguMiAxMCA5LjYgOC4zMzMzMyAxMC41MzMzWk00LjYgNkM0LjYgNS4yIDUuMiA0LjYgNiA0LjZDNi44IDQuNiA3LjQgNS4yIDcuNCA2QzcuNCA2LjggNi44IDcuNCA2IDcuNEM1LjIgNy40IDQuNiA2LjggNC42IDZaIiBmaWxsPSIjMDBGRkYwIi8+CjwvZz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8xODdfMjgzOSI+CjxyZWN0IHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPGNsaXBQYXRoIGlkPSJjbGlwMV8xODdfMjgzOSI+CjxyZWN0IHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K"
-                              styie={{ color: "transparent" }}
-                            />
-                            1
-                          </td>
-                          <td>core...hpk</td>
-                          <td>elpe...ore</td>
-                          <td>2 days ago</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+                <DescPad attributes={nftMetaData?.attributes || []} />
               </div>
               <div className="colum right">
                 <div className="nft-detail__listing-price widget">
@@ -708,7 +533,14 @@ const DetailNft = ({ tokenId }) => {
                           src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkgOUg5LjAwODk4TTQuNTg1NzkgMTEuNTg1OEwxMi41ODU4IDE5LjU4NThDMTMuMzY2OCAyMC4zNjY4IDE0LjYzMzIgMjAuMzY2OCAxNS40MTQyIDE5LjU4NThMMTkuNTg1OCAxNS40MTQyQzIwLjM2NjggMTQuNjMzMiAyMC4zNjY4IDEzLjM2NjggMTkuNTg1OCAxMi41ODU4TDExLjU4NTggNC41ODU3OUMxMS4yMTA3IDQuMjEwNzEgMTAuNzAyIDQgMTAuMTcxNiA0SDcuODI4NDNDNy4yOTc5OSA0IDYuNzg5MjkgNC4yMTA3MSA2LjQxNDIxIDQuNTg1NzlMNC41ODU3OSA2LjQxNDIxQzQuMjEwNzEgNi43ODkyOSA0IDcuMjk3OTkgNCA3LjgyODQzVjEwLjE3MTZDNCAxMC43MDIgNC4yMTA3MSAxMS4yMTA3IDQuNTg1NzkgMTEuNTg1OFoiIHN0cm9rZT0iIzAwRkZGMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg=="
                           styie={{ color: "transparent" }}
                         />
-                        Listing Price
+                        {globalDetailNFT?.isSale === 2
+                          ? globalDetailNFT?.bids &&
+                            globalDetailNFT?.bids?.length > 0
+                            ? "Current Bid"
+                            : "Start price"
+                          : globalDetailNFT?.isSale === 1
+                          ? "Sale Price"
+                          : "Price"}
                       </div>
                       {/* <div className="nft-detail__listing-price--right">
                         <img
@@ -733,246 +565,105 @@ const DetailNft = ({ tokenId }) => {
                         src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE4N18yODM5KSI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMV8xODdfMjgzOSkiPgo8cGF0aCBkPSJNNiAwQzIuNjY2NjcgMCAwIDIuNjY2NjcgMCA2QzAgOS4zMzMzMyAyLjY2NjY3IDEyIDYgMTJDOS4zMzMzMyAxMiAxMiA5LjMzMzMzIDEyIDZDMTIgMi42NjY2NyA5LjMzMzMzIDAgNiAwWk04LjMzMzMzIDEwLjUzMzNDNy40NjY2NyAxMSA2LjYgMTEuMTMzMyA1LjY2NjY3IDExLjA2NjdDNC40NjY2NyAxMSAzLjQgMTAuNTMzMyAyLjQ2NjY3IDkuNzMzMzNDMi4zMzMzMyA5LjYgMi4zMzMzMyA5LjYgMi40NjY2NyA5LjQ2NjY3QzMgOC45MzMzMyAzLjUzMzMzIDguNDY2NjcgNCA3LjkzMzMzQzQuMDY2NjcgNy44NjY2NyA0LjEzMzMzIDcuODY2NjcgNC4yNjY2NyA3LjkzMzMzQzUuNTMzMzMgOS4wNjY2NyA3LjUzMzMzIDguNjY2NjcgOC4yNjY2NyA3LjJDOS4wNjY2NyA1LjYgOCAzLjczMzMzIDYuMjY2NjcgMy41MzMzM0M1LjUzMzMzIDMuNDY2NjcgNC44NjY2NyAzLjY2NjY3IDQuMjY2NjcgNC4xMzMzM0M0LjEzMzMzIDQuMiA0LjA2NjY3IDQuMiA0IDQuMTMzMzNDMy40NjY2NyAzLjYgMi45MzMzMyAzLjA2NjY3IDIuNCAyLjUzMzMzQzIuMzMzMzMgMi40NjY2NyAyLjMzMzMzIDIuNCAyLjQgMi4zMzMzM0MyLjkzMzMzIDEuODY2NjcgMy41MzMzMyAxLjQ2NjY3IDQuMiAxLjI2NjY3QzQuNzMzMzMgMSA1LjMzMzMzIDAuOTMzMzMzIDUuOTMzMzMgMC45MzMzMzNDNy45MzMzMyAxIDkuNDY2NjcgMS44NjY2NyAxMC40NjY3IDMuNkMxMC45MzMzIDQuNDY2NjcgMTEuMTMzMyA1LjMzMzMzIDExLjA2NjcgNi4zMzMzM0MxMC45MzMzIDguMiAxMCA5LjYgOC4zMzMzMyAxMC41MzMzWk00LjYgNkM0LjYgNS4yIDUuMiA0LjYgNiA0LjZDNi44IDQuNiA3LjQgNS4yIDcuNCA2QzcuNCA2LjggNi44IDcuNCA2IDcuNEM1LjIgNy40IDQuNiA2LjggNC42IDZaIiBmaWxsPSIjMDBGRkYwIi8+CjwvZz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8xODdfMjgzOSI+CjxyZWN0IHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPGNsaXBQYXRoIGlkPSJjbGlwMV8xODdfMjgzOSI+CjxyZWN0IHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K"
                         styie={{ color: "transparent" }}
                       />
-                      <span className="cost">180</span>{" "}
-                      <span className="amount ">($12.03)</span>
+                      <span className="cost">
+                        <PricesUnit
+                          className="priceTag py-[10px]"
+                          item={globalDetailNFT}
+                        />
+                      </span>{" "}
+                      {/* <span className="amount ">($12.03)</span> */}
                     </div>
                     <div className="nft-detail__listing-price--action ">
-                      <button
+                      {/* <button
                         type="button"
                         className="button button--primary  "
                       >
                         BUY NOW
-                      </button>
-                      <button
-                        type="button"
-                        className="button button--secondary  "
-                      >
-                        MAKE OFFER
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="nft-detail__details widget">
-                  <div className="nft-detail__details--title">Details</div>
-                  <div className="nft-detail__details--content">
-                    <div className="nft-detail__details--item">
-                      <div className="nft-detail__details--colum left">
-                        <img
-                          alt=""
-                          width="0"
-                          height="0"
-                          decoding="async"
-                          data-nimg="1"
-                          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDkuNUgxMk04IDE4LjVIMTJNMTIgOS41SDEwQzguODk1NDMgOS41IDggMTAuMzk1NCA4IDExLjVWMTJDOCAxMy4xMDQ2IDguODk1NDMgMTQgMTAgMTRIMTRDMTUuMTA0NiAxNCAxNiAxNC44OTU0IDE2IDE2VjE2LjVDMTYgMTcuNjA0NiAxNS4xMDQ2IDE4LjUgMTQgMTguNUgxMk0xMiA5LjVWOE0xMiA5LjVWMTguNU0xMiAxOC41VjIwIiBzdHJva2U9IiMwMEZGRjAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNNiA0LjVMMTggNC41IiBzdHJva2U9IiMwMEZGRjAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K"
-                          styie={{ color: "transparent" }}
-                        />
-                        Top bidd
-                      </div>
-                      <div className="nft-detail__details--colum right coin">
-                        <img
-                          alt=""
-                          width="0"
-                          height="0"
-                          decoding="async"
-                          data-nimg="1"
-                          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE4N18yODMxKSI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMV8xODdfMjgzMSkiPgo8cGF0aCBkPSJNNiAwQzIuNjY2NjcgMCAwIDIuNjY2NjcgMCA2QzAgOS4zMzMzMyAyLjY2NjY3IDEyIDYgMTJDOS4zMzMzMyAxMiAxMiA5LjMzMzMzIDEyIDZDMTIgMi42NjY2NyA5LjMzMzMzIDAgNiAwWk04LjMzMzMzIDEwLjUzMzNDNy40NjY2NyAxMSA2LjYgMTEuMTMzMyA1LjY2NjY3IDExLjA2NjdDNC40NjY2NyAxMSAzLjQgMTAuNTMzMyAyLjQ2NjY3IDkuNzMzMzNDMi4zMzMzMyA5LjYgMi4zMzMzMyA5LjYgMi40NjY2NyA5LjQ2NjY3QzMgOC45MzMzMyAzLjUzMzMzIDguNDY2NjcgNCA3LjkzMzMzQzQuMDY2NjcgNy44NjY2NyA0LjEzMzMzIDcuODY2NjcgNC4yNjY2NyA3LjkzMzMzQzUuNTMzMzMgOS4wNjY2NyA3LjUzMzMzIDguNjY2NjcgOC4yNjY2NyA3LjJDOS4wNjY2NyA1LjYgOCAzLjczMzMzIDYuMjY2NjcgMy41MzMzM0M1LjUzMzMzIDMuNDY2NjcgNC44NjY2NyAzLjY2NjY3IDQuMjY2NjcgNC4xMzMzM0M0LjEzMzMzIDQuMiA0LjA2NjY3IDQuMiA0IDQuMTMzMzNDMy40NjY2NyAzLjYgMi45MzMzMyAzLjA2NjY3IDIuNCAyLjUzMzMzQzIuMzMzMzMgMi40NjY2NyAyLjMzMzMzIDIuNCAyLjQgMi4zMzMzM0MyLjkzMzMzIDEuODY2NjcgMy41MzMzMyAxLjQ2NjY3IDQuMiAxLjI2NjY3QzQuNzMzMzMgMSA1LjMzMzMzIDAuOTMzMzMzIDUuOTMzMzMgMC45MzMzMzNDNy45MzMzMyAxIDkuNDY2NjcgMS44NjY2NyAxMC40NjY3IDMuNkMxMC45MzMzIDQuNDY2NjcgMTEuMTMzMyA1LjMzMzMzIDExLjA2NjcgNi4zMzMzM0MxMC45MzMzIDguMiAxMCA5LjYgOC4zMzMzMyAxMC41MzMzWk00LjYgNkM0LjYgNS4yIDUuMiA0LjYgNiA0LjZDNi44IDQuNiA3LjQgNS4yIDcuNCA2QzcuNCA2LjggNi44IDcuNCA2IDcuNEM1LjIgNy40IDQuNiA2LjggNC42IDZaIiBmaWxsPSJ3aGl0ZSIvPgo8L2c+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMTg3XzI4MzEiPgo8cmVjdCB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjxjbGlwUGF0aCBpZD0iY2xpcDFfMTg3XzI4MzEiPgo8cmVjdCB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg=="
-                          styie={{ color: "transparent" }}
-                        />
-                        0
-                      </div>
-                    </div>
-                    <div className="nft-detail__details--item">
-                      <div className="nft-detail__details--colum left">
-                        <img
-                          alt=""
-                          width="0"
-                          height="0"
-                          decoding="async"
-                          data-nimg="1"
-                          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1LjUgMTlIOUM2Ljc5MDg2IDE5IDUgMTcuMjA5MSA1IDE1VjVMNy42MjUgNi43NUwxMC4yNSA1TDEyLjg3NSA2Ljc1TDE1LjUgNVYxMk0xNS41IDE5VjEyTTE1LjUgMTlWMTlDMTcuNDMzIDE5IDE5IDE3LjQzMyAxOSAxNS41VjEySDE1LjVNOC41IDkuMzc1SDEyTTguNSAxMi44NzVIMTJNOC41IDE2LjM3NUgxMiIgc3Ryb2tlPSIjMDBGRkYwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg=="
-                          styie={{ color: "transparent" }}
-                        />
-                        Last Sale
-                      </div>
-                      <div className="nft-detail__details--colum right coin">
-                        <img
-                          alt=""
-                          width="0"
-                          height="0"
-                          decoding="async"
-                          data-nimg="1"
-                          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE4N18yODMxKSI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMV8xODdfMjgzMSkiPgo8cGF0aCBkPSJNNiAwQzIuNjY2NjcgMCAwIDIuNjY2NjcgMCA2QzAgOS4zMzMzMyAyLjY2NjY3IDEyIDYgMTJDOS4zMzMzMyAxMiAxMiA5LjMzMzMzIDEyIDZDMTIgMi42NjY2NyA5LjMzMzMzIDAgNiAwWk04LjMzMzMzIDEwLjUzMzNDNy40NjY2NyAxMSA2LjYgMTEuMTMzMyA1LjY2NjY3IDExLjA2NjdDNC40NjY2NyAxMSAzLjQgMTAuNTMzMyAyLjQ2NjY3IDkuNzMzMzNDMi4zMzMzMyA5LjYgMi4zMzMzMyA5LjYgMi40NjY2NyA5LjQ2NjY3QzMgOC45MzMzMyAzLjUzMzMzIDguNDY2NjcgNCA3LjkzMzMzQzQuMDY2NjcgNy44NjY2NyA0LjEzMzMzIDcuODY2NjcgNC4yNjY2NyA3LjkzMzMzQzUuNTMzMzMgOS4wNjY2NyA3LjUzMzMzIDguNjY2NjcgOC4yNjY2NyA3LjJDOS4wNjY2NyA1LjYgOCAzLjczMzMzIDYuMjY2NjcgMy41MzMzM0M1LjUzMzMzIDMuNDY2NjcgNC44NjY2NyAzLjY2NjY3IDQuMjY2NjcgNC4xMzMzM0M0LjEzMzMzIDQuMiA0LjA2NjY3IDQuMiA0IDQuMTMzMzNDMy40NjY2NyAzLjYgMi45MzMzMyAzLjA2NjY3IDIuNCAyLjUzMzMzQzIuMzMzMzMgMi40NjY2NyAyLjMzMzMzIDIuNCAyLjQgMi4zMzMzM0MyLjkzMzMzIDEuODY2NjcgMy41MzMzMyAxLjQ2NjY3IDQuMiAxLjI2NjY3QzQuNzMzMzMgMSA1LjMzMzMzIDAuOTMzMzMzIDUuOTMzMzMgMC45MzMzMzNDNy45MzMzMyAxIDkuNDY2NjcgMS44NjY2NyAxMC40NjY3IDMuNkMxMC45MzMzIDQuNDY2NjcgMTEuMTMzMyA1LjMzMzMzIDExLjA2NjcgNi4zMzMzM0MxMC45MzMzIDguMiAxMCA5LjYgOC4zMzMzMyAxMC41MzMzWk00LjYgNkM0LjYgNS4yIDUuMiA0LjYgNiA0LjZDNi44IDQuNiA3LjQgNS4yIDcuNCA2QzcuNCA2LjggNi44IDcuNCA2IDcuNEM1LjIgNy40IDQuNiA2LjggNC42IDZaIiBmaWxsPSJ3aGl0ZSIvPgo8L2c+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMTg3XzI4MzEiPgo8cmVjdCB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjxjbGlwUGF0aCBpZD0iY2xpcDFfMTg3XzI4MzEiPgo8cmVjdCB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg=="
-                          styie={{ color: "transparent" }}
-                        />
-                        0
-                      </div>
-                    </div>
-                    <div className="nft-detail__details--item">
-                      <div className="nft-detail__details--colum left">
-                        <img
-                          alt=""
-                          width="0"
-                          height="0"
-                          decoding="async"
-                          data-nimg="1"
-                          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5IDE3LjMzMzNDMTkgMTguODA2MSAxNS44NjYgMjAgMTIgMjBDOC4xMzQwMSAyMCA1IDE4LjgwNjEgNSAxNy4zMzMzQzUgMTUuODYwNiA4LjEzNDAxIDE0LjY2NjcgMTIgMTQuNjY2N0MxNS44NjYgMTQuNjY2NyAxOSAxNS44NjA2IDE5IDE3LjMzMzNaIiBzdHJva2U9IiMwMEZGRjAiLz4KPHBhdGggZD0iTTE1LjUgNy41NTU1NkMxNS41IDkuNTE5MjMgMTMuOTMzIDExLjExMTEgMTIgMTEuMTExMUMxMC4wNjcgMTEuMTExMSA4LjUgOS41MTkyMyA4LjUgNy41NTU1NkM4LjUgNS41OTE4OCAxMC4wNjcgNCAxMiA0QzEzLjkzMyA0IDE1LjUgNS41OTE4OCAxNS41IDcuNTU1NTZaIiBzdHJva2U9IiMwMEZGRjAiLz4KPC9zdmc+Cg=="
-                          styie={{ color: "transparent" }}
-                        />
-                        Owner
-                      </div>
-                      <div className="nft-detail__details--colum right owner">
-                        <a
-                          target="_blank"
-                          href="/profile/core1uq5wn694a5lfsy4uj3m6hevpdxqah8kks0zdrg/"
-                        >
-                          elpedro.core
-                        </a>
-                        <div>
-                          <div className="tooltip copy">
-                            <img
-                              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDhIMTBDOC44OTU0MyA4IDggOC44OTU0MyA4IDEwVjE2TTE2IDhIMThDMTkuMTA0NiA4IDIwIDguODk1NDMgMjAgMTBWMThDMjAgMTkuMTA0NiAxOS4xMDQ2IDIwIDE4IDIwSDEwQzguODk1NDMgMjAgOCAxOS4xMDQ2IDggMThWMTZNMTYgOFY2QzE2IDQuODk1NDMgMTUuMTA0NiA0IDE0IDRINkM0Ljg5NTQzIDQgNCA0Ljg5NTQzIDQgNlYxNEM0IDE1LjEwNDYgNC44OTU0MyAxNiA2IDE2SDgiIHN0cm9rZT0iIzAwRkZGMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo="
-                              className="copy"
-                              alt="test"
-                            />
-                            <span className="tooltiptext">
-                              Copy to clipboard
-                            </span>
+                      </button> */}
+
+                      {globalDetailNFT &&
+                        currentUsr &&
+                        globalDetailNFT.isSale === 1 &&
+                        globalDetailNFT.owner &&
+                        globalDetailNFT.owner._id !== currentUsr._id && (
+                          <div
+                            type="button"
+                            className="button button--primary buyBox rounded-xl whitespace-nowrap"
+                            onClick={() => setVisibleModalPurchase(true)}
+                          >
+                            Buy now
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="nft-detail__details--item">
-                      <div className="nft-detail__details--colum left">
-                        <img
-                          alt=""
-                          width="0"
-                          height="0"
-                          decoding="async"
-                          data-nimg="1"
-                          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUgMTVWNy43MTQyOUw4Ljg4ODg5IDExLjI4NTdMMTIgN0wxNS4xMTExIDExLjI4NTdMMTkgNy43MTQyOVYxNUMxOSAxNi4xMDQ2IDE4LjEwNDYgMTcgMTcgMTdIN0M1Ljg5NTQzIDE3IDUgMTYuMTA0NiA1IDE1WiIgc3Ryb2tlPSIjMDBGRkYwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo="
-                          styie={{ color: "transparent" }}
-                        />
-                        Creator Fee
-                      </div>
-                      <div className="nft-detail__details--colum right">
-                        10%
-                      </div>
-                    </div>
-                    <div className="nft-detail__details--item">
-                      <div className="nft-detail__details--colum left">
-                        <img
-                          alt=""
-                          width="0"
-                          height="0"
-                          decoding="async"
-                          data-nimg="1"
-                          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDNMMTQuNzgxMiA4LjU5NjA1TDIxIDkuNDkzNDJMMTYuNSAxMy44NDkzTDE3LjU2MjMgMjBMMTIgMTcuMDk2MUw2LjQzNzY5IDIwTDcuNSAxMy44NDkzTDMgOS40OTM0Mkw5LjIxODg1IDguNTk2MDVMMTIgM1oiIHN0cm9rZT0iIzAwRkZGMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo="
-                          styie={{ color: "transparent" }}
-                        />
-                        Rarity Score
-                      </div>
-                      <div className="nft-detail__details--colum right">
-                        103.37
-                      </div>
-                    </div>
-                    <div className="nft-detail__details--item">
-                      <div className="nft-detail__details--colum left">
-                        <img
-                          alt=""
-                          width="0"
-                          height="0"
-                          decoding="async"
-                          data-nimg="1"
-                          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuNTAzODYgNy43MTIwOEwxMS41MDM5IDQuMjgzNTFDMTEuODExMyA0LjEwNzgzIDEyLjE4ODcgNC4xMDc4MyAxMi40OTYxIDQuMjgzNTFMMTguNDk2MSA3LjcxMjA4QzE4LjgwNzcgNy44OTAxMiAxOSA4LjIyMTQ3IDE5IDguNTgwMzJWMTUuNDE5N0MxOSAxNS43Nzg1IDE4LjgwNzcgMTYuMTA5OSAxOC40OTYxIDE2LjI4NzlMMTIuNDk2MSAxOS43MTY1QzEyLjE4ODcgMTkuODkyMiAxMS44MTEzIDE5Ljg5MjIgMTEuNTAzOSAxOS43MTY1TDUuNTAzODYgMTYuMjg3OUM1LjE5MjI5IDE2LjEwOTkgNSAxNS43Nzg1IDUgMTUuNDE5N1Y4LjU4MDMyQzUgOC4yMjE0NyA1LjE5MjI5IDcuODkwMTIgNS41MDM4NiA3LjcxMjA4WiIgc3Ryb2tlPSIjMDBGRkYwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg=="
-                          styie={{ color: "transparent" }}
-                        />
-                        NFT Rank
-                      </div>
-                      <div className="nft-detail__details--colum right">
-                        7205
-                      </div>
+                        )}
+                      {globalDetailNFT &&
+                        currentUsr &&
+                        globalDetailNFT.isSale === 2 &&
+                        globalDetailNFT.owner &&
+                        globalDetailNFT.owner._id !== currentUsr._id &&
+                        !auctionEnded && (
+                          <div
+                            type="button"
+                            className="button button--primary buyBox rounded-xl whitespace-nowrap"
+                            onClick={() => setVisibleModalBid(true)}
+                          >
+                            Place a bid
+                          </div>
+                        )}
+                      {globalDetailNFT &&
+                        currentUsr &&
+                        globalDetailNFT.isSale === 2 &&
+                        globalDetailNFT.owner &&
+                        globalDetailNFT.owner._id === currentUsr._id &&
+                        (globalDetailNFT.bids.length > 0 ? (
+                          <button
+                            type="button"
+                            className="button button--primary buyBox rounded-xl whitespace-nowrap"
+                            onClick={() => setVisibleModalAccept(true)}
+                          >
+                            Accept
+                          </button>
+                        ) : (
+                          <button
+                            type="button"
+                            className="button button--primary buyBox rounded-xl whitespace-nowrap"
+                            onClick={() => setVisibleModalCancelSale(true)}
+                          >
+                            Delist NFT
+                          </button>
+                        ))}
+                      {globalDetailNFT &&
+                        currentUsr &&
+                        globalDetailNFT.owner &&
+                        globalDetailNFT.owner._id === currentUsr._id &&
+                        globalDetailNFT.isSale === 0 && (
+                          <button
+                            type="button"
+                            className="button button--primary buyBox rounded-xl whitespace-nowrap"
+                            onClick={() => setVisibleModalSale(true)}
+                          >
+                            List NFT
+                          </button>
+                        )}
+                      {globalDetailNFT &&
+                        currentUsr &&
+                        globalDetailNFT.owner &&
+                        globalDetailNFT.owner._id === currentUsr._id &&
+                        globalDetailNFT.isSale === 1 && (
+                          <button
+                            type="button"
+                            className="button button--primary buyBox rounded-xl whitespace-nowrap"
+                            onClick={() => setVisibleModalCancelSale(true)}
+                          >
+                            Delist NFT
+                          </button>
+                        )}
                     </div>
                   </div>
                 </div>
-                <div className="nft-detail__attributes widget">
-                  <div className="nft-detail__attributes--title">
-                    attributes
-                  </div>
-                  <div className="nft-detail__attributes--content">
-                    <div className="nft-detail__attributes--item">
-                      <div className="nft-detail__attributes--item-attribute">
-                        Background
-                      </div>
-                      <div className="nft-detail__attributes--item-category">
-                        Core Red digital
-                      </div>
-                    </div>
-                    <div className="nft-detail__attributes--item">
-                      <div className="nft-detail__attributes--item-attribute">
-                        Wings
-                      </div>
-                      <div className="nft-detail__attributes--item-category">
-                        No Wings
-                      </div>
-                    </div>
-                    <div className="nft-detail__attributes--item">
-                      <div className="nft-detail__attributes--item-attribute">
-                        Base
-                      </div>
-                      <div className="nft-detail__attributes--item-category">
-                        Blue
-                      </div>
-                    </div>
-                    <div className="nft-detail__attributes--item">
-                      <div className="nft-detail__attributes--item-attribute">
-                        Clothing
-                      </div>
-                      <div className="nft-detail__attributes--item-category">
-                        No Clothing
-                      </div>
-                    </div>
-                    <div className="nft-detail__attributes--item">
-                      <div className="nft-detail__attributes--item-attribute">
-                        Head
-                      </div>
-                      <div className="nft-detail__attributes--item-category">
-                        Spikey hair Black
-                      </div>
-                    </div>
-                    <div className="nft-detail__attributes--item">
-                      <div className="nft-detail__attributes--item-attribute">
-                        Mouth
-                      </div>
-                      <div className="nft-detail__attributes--item-category">
-                        Regular
-                      </div>
-                    </div>
-                    <div className="nft-detail__attributes--item">
-                      <div className="nft-detail__attributes--item-attribute">
-                        Eyes
-                      </div>
-                      <div className="nft-detail__attributes--item-category">
-                        Regular Eyes
-                      </div>
-                    </div>
-                    <div className="nft-detail__attributes--item">
-                      <div className="nft-detail__attributes--item-attribute">
-                        Pets
-                      </div>
-                      <div className="nft-detail__attributes--item-category">
-                        No Pet
-                      </div>
-                    </div>
-                    <div className="nft-detail__attributes--item">
-                      <div className="nft-detail__attributes--item-attribute">
-                        Attribute Count
-                      </div>
-                      <div className="nft-detail__attributes--item-category">
-                        8
-                      </div>
-                    </div>
-                  </div>
-                </div>{" "}
+                <BidPad attributes={nftMetaData?.attributes || []} />
+                <PropPad
+                  // attributes={nftMetaData?.attributes || []}
+                  attributes={globalDetailNFT.metaData}
+                />
                 <div className="nft-detail__activities widget mobile">
                   <div className="nft-detail__activities--title">Activity</div>
                   <div className="nft-detail__activities--content">

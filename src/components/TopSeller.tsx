@@ -101,7 +101,7 @@ const TopSeller = () => {
     <div
       className="rn-top-top-seller-area nice-selector-transparent rn-section-gapTop"
       style={{ 
-        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+        backgroundColor: "rgba(19, 19, 29, 0.97)" 
       }}
 
     >

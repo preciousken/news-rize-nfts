@@ -91,7 +91,7 @@ const TopCollection = () => {
     <div
       className="rn-collection-area rn-section-gapTop rn-section-gapBottom"
       style={{
-        backgroundColor: "rgba(19, 19, 29, 0.9)",
+        backgroundColor: "rgba(19, 19, 29, 0.97)",
       }}
     >
       <div className="container">

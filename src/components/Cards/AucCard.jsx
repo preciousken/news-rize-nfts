@@ -84,7 +84,6 @@ const AucCard = ({ item, hasCountdown = false }) => {
     // }
   }, []);
 
-
   return (
     <div
       className="single-slide-product slick-slide"
@@ -106,11 +105,14 @@ const AucCard = ({ item, hasCountdown = false }) => {
           }}
         >
           <a
-            href="nft-details"
+            href={`/nft-details?tokenId=${nftItem?._id}`}
             tabIndex="-1"
             style={{ display: "block", height: "100%", width: "100%" }}
           >
-            <LazyLoadImage src={config.ipfsGateway + nftItem?.logoURL} placeholder={nftItem?.thumbnailURL} />
+            <LazyLoadImage
+              src={config.ipfsGateway + nftItem?.logoURL}
+              placeholder={nftItem?.thumbnailURL}
+            />
           </a>
           {hasCountdown && (
             <div className="countdown" data-date="2024-10-08">
