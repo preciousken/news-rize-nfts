@@ -98,7 +98,7 @@ const DescPad = ({ attributes }) => {
           </table>
         </div>
       ) : (
-        <div className="flex justify-center items-center propertiesMobileDetails rounded-3xl overflow-hidden overflow-y-scroll h-[100px]">
+        <div className="flex justify-center items-center propertiesMobileDetails rounded-3xl overflow-hidden overflow-y-scroll h-[100px]"style={{fontSize:20,color:"#fff"}}>
           No History
         </div>
       )}

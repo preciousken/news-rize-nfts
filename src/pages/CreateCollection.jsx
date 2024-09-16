@@ -3,8 +3,9 @@ import SubNav from "../components/SubNav";
 
 const CreateCollection = () => {
   return (
+    <>
     <div style={{ 
-        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+        backgroundColor: "rgba(19, 19, 29, 0.97)" 
       }}
 >
       <SubNav title="Create Collection" />
@@ -237,6 +238,7 @@ const CreateCollection = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

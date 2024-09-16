@@ -11,7 +11,7 @@ const CreateNft = () => {
   return (
     <>
       <div className="create-area rn-section-gapTop">
-        <div className="container">
+        <div className="container"> 
           <div className="row g-5">
             <div className="col-lg-3 offset-1 ml_md--0 ml_sm--0">
               {/* <!-- file upload area --> */}

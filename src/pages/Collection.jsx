@@ -925,8 +925,8 @@ const Collection = () => {
           <img src="https://app-static.bidds.com/_next/static/images/biddsWaiting-1646034bc4dc5b8d97b2944a3f086146.gif" />
         </div>
       </div>
-      {/* ////// */}
-      <div className="filter-collection collection-single-page">
+      {/* ///filter/// */}
+      {/* <div className="filter-collection collection-single-page">
         <div className="left">
           <button
             type="button"
@@ -1052,7 +1052,7 @@ const Collection = () => {
             />
           </button>
         </div>
-      </div>
+      </div> */}
 
       {/* ////////0000000000 stop 00000000/ */}
       <div className="mid-section-wrapper collection-owned-wrapper">

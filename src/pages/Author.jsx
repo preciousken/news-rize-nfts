@@ -5,7 +5,7 @@ import ExploreProduct from "../components/ExploreProduct";
 const Author = () => {
   return (
     <div style={{ 
-        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+        backgroundColor: "rgba(19, 19, 29, 0.97)" 
       }}
 >
       {/* /////////// */}

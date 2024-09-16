@@ -153,7 +153,7 @@ const ColLC = ({ item, key, selectable }) => {
                     ? nftName?.substring(0, 10) + "..."
                     : nftName}
                 </div>
-                <div className="Tooltip_tooltipContainer__cjikM Tooltip_left__2dC0Y">
+                {/* <div className="Tooltip_tooltipContainer__cjikM Tooltip_left__2dC0Y">
                   <div className="nft-detail__top--status grey">
                     <img
                       alt="Hexagon"
@@ -169,7 +169,7 @@ const ColLC = ({ item, key, selectable }) => {
                   <div className="Tooltip_tooltipContent__7RzH9 ">
                     In the top 100%
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className="profile-card__buy-now--amount">
                 <img

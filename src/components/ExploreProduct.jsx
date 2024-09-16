@@ -13,7 +13,7 @@ const ExploreProduct = () => {
     <div
       className="rn-product-area rn-section-gapTop"
       style={{ 
-        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+        backgroundColor: "rgba(19, 19, 29, 0.97)" 
       }}
 
     >

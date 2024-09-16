@@ -4,7 +4,7 @@ import "./css/Footer.css";
 const Footer = () => {
   return (
     <footer className="footer-section" style={{ 
-        backgroundColor: "rgba(19, 19, 29, 0.9)" 
+        backgroundColor: "rgba(19, 19, 29, 0.97)" 
       }}
 >
       <div className="copyright-area">

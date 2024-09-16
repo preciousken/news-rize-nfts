@@ -49,7 +49,7 @@ const BidPad = ({ attributes }) => {
     <div className="nft-detail__details widget">
       <div className="nft-detail__details--title">bids</div>
       <div className="nft-detail__details--content">
-        <div className="nft-detail__details--item">
+        {/* <div className="nft-detail__details--item">
           <div className="nft-detail__details--colum left">
             <img
               alt=""
@@ -74,7 +74,7 @@ const BidPad = ({ attributes }) => {
             />
             0
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

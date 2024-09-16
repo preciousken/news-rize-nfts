@@ -23,6 +23,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { config } from './config';
 import { io } from "socket.io-client";
 import MyCollection from './pages/MyCollection';
+import CreateNft_ from './pages/CreateNft_';
 
 
 export const socket = io(`${config.socketUrl}`);
@@ -42,7 +43,7 @@ const App: React.FC = () => {
               {/* <Route element={<AuthRequired />}> */}
               <Route path="/" element={<Home />} />
               {/* </Route> */}
-              <Route path="/createnft" element={<CreateNFT />} />
+              {/* <Route path="/createnft" element={<CreateNFT />} /> */}
               <Route path="/activity" element={<Activity />} />
               <Route path="/create-collection" element={<CreateCollection />} />
               <Route path="/author" element={<Author />} />
@@ -50,6 +51,7 @@ const App: React.FC = () => {
               <Route path="/collection" element={<Collection />} />
               <Route path="/my-collection" element={<MyCollection/>} />
               <Route path="/nft-details" element={<ProductDetails />} />
+              <Route path="/createnft" element={<CreateNft_ />} />
 
               {/* 404 page */}
               <Route path="*" element={<PageNotFound />} />

@@ -10284,7 +10284,7 @@ input[type="number"] {
 
 .nft-detail__wrapper {
   position: relative;
-  background: var(--background-dark, #0a1013);
+  background: var(--background-dark, rgba(19, 19, 29, 0.99));
   padding: 8px 10px;
   min-height: var(--full-vh);
 }
@@ -21008,6 +21008,7 @@ input[type="number"] {
 .collection-owned-wrapper {
   display: grid;
   background-color: rgba(19, 19, 29, 0.9) !important;
+  margin-top: 80px !important;
 }
 
 @media (min-width: 1180px) {
