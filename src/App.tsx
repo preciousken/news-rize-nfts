@@ -24,6 +24,7 @@ import { config } from './config';
 import { io } from "socket.io-client";
 import MyCollection from './pages/MyCollection';
 import CreateNft_ from './pages/CreateNft_';
+// import ConnectM from './components/Modal/ConnectM';
 
 
 export const socket = io(`${config.socketUrl}`);

@@ -63,6 +63,8 @@ const AuthProvider = ({ children }) => {
   const [isOpenFilter, setOpenFilter] = useState(false);
   const [cartCount, setCartCount] = useState(0);
 
+  const [isConnectMOpen, setIsConnectMOpen] = useState(false);
+
   const MARKETPLACE = config.MARKETPLACE;
   const CW20_CONTRACT = config.CW20_CONTRACT;
 
@@ -80,7 +82,11 @@ const AuthProvider = ({ children }) => {
     }
   };
 
-  const connectWallet = async (wallet_type = "keplr", new_config = null) => {
+  const OpenConnectM = () => {
+    setIsConnectMOpen(!isConnectMOpen);
+  };
+
+  const connectWallet = async (wallet_type, new_config = null) => {
     const provider = await getWalletProvider(wallet_type);
     let walletConfig = chainConfig;
     if (!isEmpty(new_config)) {
@@ -118,6 +124,8 @@ const AuthProvider = ({ children }) => {
         return;
       }
     }
+
+    setIsConnectMOpen(false);
 
     try {
       await provider.enable(walletConfig.chainId);
@@ -1089,11 +1097,18 @@ const AuthProvider = ({ children }) => {
     window.location.href = "/";
   };
 
+
   return (
     <AuthContext.Provider
       value={{
         token,
         user,
+        walletAddress,
+        client,
+        balances,
+        signingClient,
+        isOpenFilter,
+        cartCount,
         loginAction,
         logOut,
 
@@ -1107,12 +1122,6 @@ const AuthProvider = ({ children }) => {
         // /
         //
 
-        walletAddress,
-        client,
-        balances,
-        signingClient,
-        isOpenFilter,
-        cartCount,
         setOpenFilter,
         setCartCount,
         loadClient,
@@ -1145,6 +1154,8 @@ const AuthProvider = ({ children }) => {
         bulkBurnNFT,
         bulkTransferNFT,
         batchMintForHomies,
+        isConnectMOpen,
+        OpenConnectM,
       }}
     >
       {children}

@@ -1,19 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MobileHeader from "./MobileHeader";
+import { useAuth } from "../context/AuthContext";
+import { isEmpty } from "../lib/methods";
 
 // images
 
 const Header = () => {
+  const { OpenConnectM, walletAddress } = useAuth();
+
   return (
     <>
       <MobileHeader />
       <header
         className="rn-header haeder-default header--sticky"
-        style={{ 
-        backgroundColor: "rgba(19, 19, 29, 0.97)" ,
-      }}
-
+        style={{
+          backgroundColor: "rgba(19, 19, 29, 0.97)",
+        }}
       >
         <div className="container">
           <div className="header-inner">
@@ -135,60 +138,63 @@ const Header = () => {
                 </form>
               </div>
 
-              <div
-                className="setting-option header-btn rbt-site-header"
-                id="rbt-site-header"
-                //   style={{ display: "none" }}
-              >
-                <div className="icon-box">
-                  <button
-                    type="button"
-                    // id="connectbtn"
-                    className="btn btn-primary-alta btn-small"
-                    onClick={() => console.log ("connecting wallet...")}
-                  >
-                    Wallet connect
-                  </button>
-                </div>
-              </div>
-
-              <div className="setting-option rn-icon-list notification-badge">
-                <div className="icon-box">
-                  <a href="activity.html">
-                    <i className="feather-bell"></i>
-                    <span className="badge">6</span>
-                  </a>
-                </div>
-              </div>
-
-              <div
-                className="header_admin"
-                id="header_admin"
-                style={{ display: "block" }}
-              >
-                <div className="setting-option rn-icon-list user-account">
+              {isEmpty(walletAddress) && (
+                <div
+                  className="setting-option header-btn rbt-site-header"
+                  id="rbt-site-header"
+                  //   style={{ display: "none" }}
+                >
                   <div className="icon-box">
-                    <a href="author">
-                      <img
-                        src="assets/images/icons/boy-avater.png"
-                        alt="Images"
-                      />
-                    </a>
-                    <div className="rn-dropdown">
-                      <div className="rn-inner-top">
-                        <h4 className="title">
-                          <a
-                            href="nft-details"
-                            style={{ color: "#fff" }}
-                          >
-                            Christopher William
-                          </a>
-                        </h4>
-                        <span>
-                          <a href="edit-profile">Set Display Name</a>
-                        </span>
-                      </div>
-                      {/* <div className="rn-product-inner">
+                    <button
+                      type="button"
+                      // id="connectbtn"
+                      className="btn btn-primary-alta btn-small"
+                      onClick={() => {
+                        OpenConnectM();
+                      }}
+                    >
+                      Wallet connect
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {!isEmpty(walletAddress) && (
+                <>
+                  <div className="setting-option rn-icon-list notification-badge">
+                    <div className="icon-box">
+                      <a href="activity.html">
+                        <i className="feather-bell"></i>
+                        <span className="badge">6</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div
+                    className="header_admin"
+                    id="header_admin"
+                    style={{ display: "block" }}
+                  >
+                    <div className="setting-option rn-icon-list user-account">
+                      <div className="icon-box">
+                        <a href="author">
+                          <img
+                            src="assets/images/icons/boy-avater.png"
+                            alt="Images"
+                          />
+                        </a>
+                        <div className="rn-dropdown">
+                          <div className="rn-inner-top">
+                            <h4 className="title">
+                              <a href="nft-details" style={{ color: "#fff" }}>
+                                Christopher William
+                              </a>
+                            </h4>
+                            <span>
+                              <a href="edit-profile">Set Display Name</a>
+                            </span>
+                          </div>
+                          {/* <div className="rn-product-inner">
                         <ul className="product-list">
                           <li className="single-product-list">
                             <div className="thumbnail">
@@ -234,24 +240,26 @@ const Header = () => {
                           Add Your More Funds
                         </a>
                       </div> */}
-                      <ul className="list-inner">
-                        <li>
-                          <a href="author">My Profile</a>
-                        </li>
-                        <li>
-                          <a href="edit-profile.html">Edit Profile</a>
-                        </li>
-                        {/* <li>
+                          <ul className="list-inner">
+                            <li>
+                              <a href="author">My Profile</a>
+                            </li>
+                            <li>
+                              <a href="edit-profile.html">Edit Profile</a>
+                            </li>
+                            {/* <li>
                           <a href="connect.html">Manage funds</a>
                         </li> */}
-                        <li>
-                          <a href="/">Log Out</a>
-                        </li>
-                      </ul>
+                            <li>
+                              <a href="/">Log Out</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </>
+              )}
 
               <div className="setting-option mobile-menu-bar d-block d-xl-none">
                 <div className="hamberger">

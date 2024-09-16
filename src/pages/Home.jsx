@@ -8,10 +8,16 @@ import TopSeller from "../components/TopSeller";
 import ExploreProduct from "../components/ExploreProduct";
 import TopCollection from "../components/TopCol";
 import _TopCol from "../components/_TopCol";
+import ConnectM from "../components/Modal/ConnectM";
+import { useAuth } from "../context/AuthContext";
 
 const Home = () => {
+
+
+  const {isConnectMOpen} = useAuth()
   return (
     <>
+           {isConnectMOpen && (<ConnectM />)} 
       {/* <Hero /> */}
       <Bidding />
       {/* <Steps /> */}
