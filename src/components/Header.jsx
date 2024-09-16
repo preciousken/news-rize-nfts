@@ -7,7 +7,7 @@ import { isEmpty } from "../lib/methods";
 // images
 
 const Header = () => {
-  const { OpenConnectM, walletAddress } = useAuth();
+  const { OpenConnectM, walletAddress, disconnect } = useAuth();
 
   return (
     <>
@@ -251,7 +251,13 @@ const Header = () => {
                           <a href="connect.html">Manage funds</a>
                         </li> */}
                             <li>
-                              <a href="/">Log Out</a>
+                              {/* <a href="/">Log Out</a> */}
+                              <button
+                                type="button"
+                                onClick={() => disconnect()}
+                              >
+                                Disconnect
+                              </button>
                             </li>
                           </ul>
                         </div>
