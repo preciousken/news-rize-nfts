@@ -62,11 +62,13 @@ const ColLC = ({ item, key, selectable }) => {
   const [imageUrl, setImageUrl] = useState("");
   const curTime = useRef(0);
   const navigate = useNavigate();
+  const globalUser = useAppSelector(selectCurrentUser);
   // const dispatch = useAppDispatch();
   const [blurContent, setBlurContent] = useState(false);
   // const [DEMO_NFT_ID] = React.useState(nanoid());
   // const [isHovered, setIsHovered] = useState(!props.isHome);
   // const [isProfile, setIsProfile] = useState(!props.isProfile);
+
 
   const fetchJson = useCallback(async () => {
     if (

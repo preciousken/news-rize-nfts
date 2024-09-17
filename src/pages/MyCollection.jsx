@@ -53,39 +53,129 @@ const MyCollection = () => {
       <div className="custom-modal__inner">
         <div className="nft-detail">
           <div className="nft-detail__wrapper">
-            <div className="container">
-              <div style={{ paddingTop: "3rem", paddingRight: "5rem" }}>
-                <h1 style={{ color: "#fff" }}>My Collections</h1>
+            <main>
+              <div class="pb-6 mt-6">
+                <div class="flex flex-col justify-between relative rounded-lg bg-[transparent] min-h-screen">
+                  <div>
+                    <div class="grid grid-cols-2 sm:grid-cols-5 gap-5 p-6">
+                      <div class="h-full flex flex-col gap-3">
+                        <a
+                          class="flex items-center justify-center border rounded-2xl bg-white shadow-lg hover:border-violet-500 cursor-pointer grow"
+                          data-testid="create-collection"
+                          id="create-collection"
+                          data-headlessui-state=""
+                          href="/collections/create"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            aria-hidden="true"
+                            data-slot="icon"
+                            class="h-10 w-10"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            ></path>
+                          </svg>
+                        </a>
+                        <p>Create new collection</p>
+                      </div>
+                      <div class="flex flex-col gap-3">
+                        <a
+                          class="rounded-2xl border shadow-lg hover:border-violet-500 cursor-pointer"
+                          data-testid="collection-syntaxloom2"
+                          id="collection-syntaxloom2"
+                          data-headlessui-state=""
+                          href="/collections/syntaxloom2"
+                        >
+                          <img
+                            alt="syntaxloom"
+                            class="w-full h-auto aspect-square object-cover rounded-2xl"
+                            src="https://cdn.mintable.com/collections/01j7zrwxh0wa2xphwzf1ar61m9"
+                          />
+                        </a>
+                        <p class="break-words">syntaxloom</p>
+                      </div>
+                      <div class="flex flex-col gap-3">
+                        <a
+                          class="rounded-2xl border shadow-lg hover:border-violet-500 cursor-pointer"
+                          data-testid="collection-syntaxloom"
+                          id="collection-syntaxloom"
+                          data-headlessui-state=""
+                          href="/collections/syntaxloom"
+                        >
+                          <img
+                            alt="syntaxloom"
+                            class="w-full h-auto aspect-square object-cover rounded-2xl"
+                            src="https://cdn.mintable.com/collections/01j7zrth5eq0yy0c3ygym4hb1r"
+                          />
+                        </a>
+                        <p class="break-words">syntaxloom</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-8 mb-6">
+                    <div class="flex flex-col sm:flex-row items-center justify-between rounded-xl bg-gradient-to-r from-violet-50 to-cyan-50 p-4">
+                      <div class="flex items-center gap-4">
+                        <div class="flex gap-2">
+                          <img
+                            alt="Mintology"
+                            class="h-6"
+                            src="/mintology-icon-logo.svg"
+                          />
+                          <span>Looking for more minting options?</span>
+                        </div>
+                        <div>
+                          <span>
+                            Check out{" "}
+                            <a
+                              class="text-primary-500"
+                              data-testid="self-server-link"
+                              id="self-server-link"
+                              data-headlessui-state=""
+                              href="https://mintology.app/"
+                            >
+                              Mintology
+                            </a>{" "}
+                            now!
+                          </span>
+                        </div>
+                      </div>
+                      <a
+                        class="flex py-2.5 px-5 rounded-3xl border border-violet-500 justify-center items-center gap-3 hover:border-cyan-500 cursor-pointer"
+                        data-testid="lets-go"
+                        id="lets-go"
+                        data-headlessui-state=""
+                        href="https://mintology.app/"
+                      >
+                        <span class="text-nowrap">Let's go</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          aria-hidden="true"
+                          data-slot="icon"
+                          class="h-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                          ></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div style={{ margin: "1rem", display: "inline-block" }}>
-                <button className="nc-Button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6 ttnc-ButtonPrimary disabled:bg-opacity-70 text-primary-shadow tracking-wide bg-green-500 hover:bg-green-600 text-white button-stroke button-small focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 dark:focus:ring-offset-0">
-                  <span>Create a collection</span>
-                </button>
-              </div>
-
-              {/* Card Container */}
-              <div
-                id="sliderWrapper"
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: "20px",
-                  justifyContent: "left",
-                  padding: "20px",
-                }}
-              >
-                <DComponent
-                  imgSrc="https://image-cdn.bidds.com/?uri=ipfs%3A%2F%2FQme2aAocNYMnjtvLHpRHK3mQtdEN7XAWBHBnnfw8JNK1PJ&collection=645341849&width=1000"
-                  profileImgSrc="https://rize2day.b-cdn.net/uploads/e5221927e08f242b00693a59508897ec.png"
-                  title="collTest"
-                  itemsCount="455 items"
-                />
-              </div>
-
-              <div style={{ marginBottom: "5rem" }}>
-                <span>&nbsp;&nbsp;</span>
-              </div>
-            </div>
+            </main>
           </div>
         </div>
       </div>

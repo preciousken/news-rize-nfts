@@ -270,12 +270,12 @@ const Header = () => {
               <div className="setting-option mobile-menu-bar d-block d-xl-none">
                 <div className="hamberger">
                   <button className="hamberger-button">
-                    <i className="feather-menu"></i>
+                  <i class="fa-solid fa-bars"></i>
                   </button>
                 </div>
               </div>
 
-              <div id="my_switcher" className="my_switcher setting-option">
+              {/* <div id="my_switcher" className="my_switcher setting-option">
                 <ul>
                   <li>
                     <a
@@ -304,7 +304,7 @@ const Header = () => {
                     </a>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
